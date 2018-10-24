@@ -35,3 +35,7 @@ body {
         display: none;
     }
 }
+
+#exampleModal{
+    margin: 25px;
+}
