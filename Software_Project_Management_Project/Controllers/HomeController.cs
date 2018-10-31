@@ -29,6 +29,20 @@ namespace Software_Project_Management_Project.Controllers
             return View();
         }
 
+        public IActionResult ViewDetails()
+        {
+            ViewData["Message"] = "Your view details page page.";
+
+            return View("ViewDetails");
+        }
+
+        public IActionResult RequirmentsPage()
+        {
+            ViewData["Message"] = "Your view details page page.";
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
