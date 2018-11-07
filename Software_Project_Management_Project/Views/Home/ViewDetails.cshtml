@@ -2,4 +2,99 @@
     ViewData["Title"] = "ViewDetailsPage";
 }
 
-<p>test</p>
+<html>
+<head>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+
+    <!---Lists the Project Name with the option to edit-->
+    <div class="d-inline-flex">
+        <div class="mr-auto bg-info">Project Name</div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Edit</button>
+        </div>
+    </div>
+
+    <!--Lists the High Level Description with the option to edit-->
+    <h1>High-Level Description</h1>
+    <div class="d-flex">
+        <div class="p-2 mr-auto bg-info">Description Text</div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Edit</button>
+        </div>
+    </div>
+
+    <!--Lists the Owners with the option to edit-->
+    <h1>Owner</h1>
+    <div class="owner">
+        <!--Entering new owner-->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter New Owner Here">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="submit">
+                    <span class="glyphicon-plus-sign"></span>
+                </button>
+            </div>
+        </div>
+
+        <!--Lists of current owner-->
+        <div class="d-flex">
+            <div class="p-2 mr-auto bg-info">Owner Name</div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Lists the Team Members with the option to edit-->
+    <h1>Team Members</h1>
+    <div class="team-members">
+        <!--Entering new team member-->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter New Owner Here">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="submit">
+                    <span class="glyphicon-plus-sign"></span>
+                </button>
+            </div>
+        </div>
+
+        <!--Lists of team members-->
+        <div class="d-flex">
+            <div class="p-2 mr-auto bg-info">Team Member 1</div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Lists the Project Risks with the option to edit-->
+    <h1>Project Risks</h1>
+    <div class="risks">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter New Owner Here">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="submit">
+                    <span class="glyphicon-plus-sign"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="d-flex">
+
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-around">
+        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary">Close</button>
+    </div>
+
+</body>
+</html>
