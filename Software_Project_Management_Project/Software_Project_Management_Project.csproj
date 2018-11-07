@@ -17,4 +17,10 @@
   <ItemGroup>
     <None Remove="Views\Home\ViewDetailsScreen.html" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\js\AddNewProject.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\js\AddNewProject.js" />
+  </ItemGroup>
 </Project>
