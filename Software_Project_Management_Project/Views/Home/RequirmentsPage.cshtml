@@ -1,42 +1,4 @@
-﻿@* <html>
-        <head>
-            <style>
-                body {
-                    background-color: darkblue;
-                }
-
-                h1 {
-                    color: white;
-                    text-align: center;
-                }
-
-                p {
-                    color: pink;
-                    font-family: pink;
-                    font-size: 20px;
-                }
-                p{
-                    color: red;
-
-                }
-            </style>
-        </head>
-        <body>
-
-            <h1>----------------Requirements Home page----------------------</h1>
-            <p>Functional---------------------------- Non functional </p>
-            <p>Enter new Req here--------------------Enter new Req here </p>
-
-        </body>
-    </html>
-    }
-*@
-@*
-<div class="small text-left">
-    <h1>My First Bootstrap Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
-</div>
-*@
+﻿
 <div class="container">
     <div class="row text-center">
         <div class="col-sm-5">
@@ -50,152 +12,267 @@
                 <button type="button" class="btn btn-success">ADD</button>
             </div>
             <h3> Current Requirements </h3>
-            <div class="panel panel-default">
-                <div class="panel-body">FEQ1</div>
-            </div>
-            <p> --------Activity---------------Hours</p>
-
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Designing</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Coding</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Testing</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="panel panel-default">
-                <div class="panel-body">FEQ2</div>
-            </div>
-
-        </div>
-        @*above is the code for the left half of the screen, blow is the code for the partition and back button*@
-        <div class="col-sm-1">
-            <html>
-            <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <style>
-                    .vl {
-                        border-right: 6px solid black;
-                        height: 300px;
-                    }
-                </style>
-            </head>
-            <body>
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">FEQ1</a>
 
 
 
-                <div class="vl"></div>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            <p> --------Activity---------------Hours</p>
 
-            </body>
-        </html>
-        <html>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-                .vl {
-                    border-left: 6px solid black;
-                    height: 300px;
-                }
-            </style>
-        </head>
-        <body>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
 
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">FEQ2</button>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            <p> --------Activity---------------Hours</p>
 
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
 
-            <div class="vl"></div>
-
-        </body>
-        </html>
-        <button type="button" class="btn btn-danger">Back</button>
-        </div>
-        @*Above is the partition, below is the start of the second half of the screen*@
-        <div class="col-sm-5">
-
-            <h3>Non-functional Requirements</h3>
-
-            <div class="col-sm-10">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
-            </div>
-            <div class="col-sm-2">
-                <button type="button" class="btn btn-success">ADD</button>
-            </div>
-
-            <h3> Current Requirements </h3>
-            <div class="panel panel-default">
-                <div class="panel-body">FEQ1</div>
-            </div>
-            <p> --------Activity---------------Hours</p>
-
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Designing</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Coding</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Testing</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
-            <div class="col-sm-2" style="background-color:lavenderblush;">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-            </div>
-            <div class="col-sm-3"></div>
-            <p>---------------------------------------</p>
-            <div class="panel panel-default">
-                <div class="panel-body">FEQ2</div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+       
+    
 
 
         </div>
+@*above is the code for the left half of the screen, blow is the code for the partition and back button*@
+<div class="col-sm-1">
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .vl {
+                border-right: 6px solid black;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+
+
+
+        <div class="vl"></div>
+
+    </body>
+</html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .vl {
+            border-left: 6px solid black;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="vl"></div>
+
+</body>
+</html>
+<button type="button" class="btn btn-danger">Back</button>
+</div>
+@*Above is the partition, below is the start of the second half of the screen*@
+<div class="col-sm-5">
+
+    <h3>Non-functional Requirements</h3>
+
+    <div class="col-sm-10">
+        <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
+    </div>
+    <div class="col-sm-2">
+        <button type="button" class="btn btn-success">ADD</button>
+    </div>
+
+    <h3> Current Requirements </h3>
+    @* BELOW IS THE CODE FOR THE ACRODIANS, THE FIRST LINE MAKES THE BUTTON, AND THE BODY CONTAINS ALL THE ELEMENTS THAT IT EXPANDS TO*@
+
+
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">FEQ1</a>
+
+
+
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    <p> --------Activity---------------Hours</p>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        @* THIS IS THE END OF THE FIRST ACORIAN BUTTON, AND THE START OF THE SECOND ONE*@
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">FEQ2</button>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                    <p> --------Activity---------------Hours</p>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
     </div>
 </div>
