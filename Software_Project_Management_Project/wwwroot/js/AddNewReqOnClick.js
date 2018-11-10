@@ -8,3 +8,5 @@
     div.appendChild(input);
     chat_box.appendChild(div);
 }
+
+onload() => console.log("test");
