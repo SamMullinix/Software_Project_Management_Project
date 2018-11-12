@@ -2,7 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-
 <div class="container">
     <div class="row">
 
@@ -16,10 +15,16 @@
                         <tr>
                             <th><p style="font-size: 150%;">Project Name</p></th>
                             <th align="right">
-                            <button type="button" class="btn btn-success">
-                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                 Create New Project                                             
-                            </button></th>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Project Name Here" id="newProjectForm">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-success" onclick="myFunction()">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                            Create New Project
+                                        </button>
+                                    </div>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -189,4 +194,4 @@
 
 
 
-
+<script src="~/js/AddNewProject.js"></script>

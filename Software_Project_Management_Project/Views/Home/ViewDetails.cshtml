@@ -5,95 +5,154 @@
 <html>
 <head>
     <style>
-       
+        .input-group{
+
+            margin-bottom: 30px;
+        }
+
+        .panel{
+            margin-top: 50px;
+            margin-bottom: 75px;
+        }
     </style>
 </head>
 
 <body>
 
     <!---Lists the Project Name with the option to edit-->
-    <div class="d-inline-flex">
-        <div class="mr-auto bg-info">Project Name</div>
-        <div class="btn-group">
+    <div class="panel panel-primary">
+        <div class="panel-body pull-left">
+            <h4>Project Name</h4>
+        </div>
+        <div class="btn-group panel-body pull-right">
             <button type="button" class="btn btn-primary">Edit</button>
         </div>
     </div>
+
 
     <!--Lists the High Level Description with the option to edit-->
-    <h1>High-Level Description</h1>
-    <div class="d-flex">
-        <div class="p-2 mr-auto bg-info">Description Text</div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Edit</button>
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="padding-top: 10px;">
+            <h3>High-Level Description</h3>
         </div>
-    </div>
-
-    <!--Lists the Owners with the option to edit-->
-    <h1>Owner</h1>
-    <div class="owner">
-        <!--Entering new owner-->
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter New Owner Here">
-            <div class="input-group-append">
-                <button class="btn btn-success" type="submit">
-                    <span class="glyphicon-plus-sign"></span>
-                </button>
+        <div class="panel-body">
+            <div class="pull-left"><p><strong>Description Text</strong></p></div>
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-primary">Edit</button>
             </div>
         </div>
 
-        <!--Lists of current owner-->
-        <div class="d-flex">
-            <div class="p-2 mr-auto bg-info">Owner Name</div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+    </div>
+
+    <!--Lists the Owners with the option to edit-->
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="padding-top: 10px;">
+            <h3>Owner</h3>
+        </div>
+        <div class="owner">
+            <!--Entering new owner-->
+            <div class="panel-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter New Owner Here">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus"></span>
+
+                        </button>
+                    </div>
+                </div>
+
+
+                <!--Lists of current owner-->
+
+                <div class="table-responsive">
+                    <table id="owner-table" class="table table-hover table-dark table-striped">
+                        <tbody>
+                            <tr>
+                                <td class="col-lg-8"><p><strong>Owner Name</strong></p></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 
     <!--Lists the Team Members with the option to edit-->
-    <h1>Team Members</h1>
-    <div class="team-members">
-        <!--Entering new team member-->
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter New Owner Here">
-            <div class="input-group-append">
-                <button class="btn btn-success" type="submit">
-                    <span class="glyphicon-plus-sign"></span>
-                </button>
-            </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="padding-top: 10px;">
+            <h3>Team Members</h3>
         </div>
+        <div class="team">
+            <!--Entering new team member-->
+            <div class="panel-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter New Member Here">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus"></span>
 
-        <!--Lists of team members-->
-        <div class="d-flex">
-            <div class="p-2 mr-auto bg-info">Team Member 1</div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!--Lists of current team members-->
+                <div class="table-responsive">
+                    <table id="member-table" class="table table-hover table-dark table-striped">
+                        <tbody>
+                            <tr>
+                                <td class="col-lg-8"><p><strong>Member Name</strong></p></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
 
     <!--Lists the Project Risks with the option to edit-->
-    <h1>Project Risks</h1>
-    <div class="risks">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter New Owner Here">
-            <div class="input-group-append">
-                <button class="btn btn-success" type="submit">
-                    <span class="glyphicon-plus-sign"></span>
-                </button>
-            </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="padding-top: 10px;">
+            <h3>Risks</h3>
         </div>
+        <div class="risks">
+            <!--Entering new team member-->
+            <div class="panel-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter New Risk Here">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus"></span>
 
-        <div class="d-flex">
+                        </button>
+                    </div>
+                </div>
 
+                <div class="table-responsive">
+                    <table id="risk-table" class="table table-hover table-dark table-striped">
+                        <tbody>
+                            <tr>
+                                <td class="col-lg-4"><p><strong>Risk Name</strong></p></td>
+                                <td class="col-lg-4"><p><strong>Risk Status</strong></p></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="d-flex justify-content-around">
-        <button type="button" class="btn btn-primary">Save</button>
-        <button type="button" class="btn btn-primary">Close</button>
+        <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-danger">Close</button>
     </div>
 
 </body>
