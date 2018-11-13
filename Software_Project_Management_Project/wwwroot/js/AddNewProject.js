@@ -6,10 +6,10 @@
     var projectName = row.insertCell(0);
     var strong = document.createElement("strong");
     strong.innerHTML = document.getElementById("newProjectForm").value;
-    projectName.appendChild(p);
+    projectName.appendChild(strong);
 
     // Cell 2
-    var reqButton = row.insert(1);
+    //var reqButton = row.insertCell(1);
 
 }
 
