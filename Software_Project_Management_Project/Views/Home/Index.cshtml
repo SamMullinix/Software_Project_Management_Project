@@ -15,23 +15,30 @@
                     <thead class="thead-dark">
                         <tr>
                             <th><p style="font-size: 150%;">Project Name</p></th>
-                            <th align="right">
-                            <button type="button" class="btn btn-success">
-                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                 Create New Project                                             
-                            </button></th>
+                            <th style="text-align:right">
+                                <button type="button" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    Create New Project
+                                </button>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-
+                        <!-- below is a series of 5 "projects". Each has a name and three correlating buttons-->
                         <tr>
                             <td><p><strong>ProjectName 1A</strong></p></td>
-                            <td><button type="button" class="btn btn-primary">View REQ
+                            <td>
+                                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#RequirementsModal">
+                                    View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                              </button></td>
-                            <td><button type="button" class="btn btn-info">View Details
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -41,12 +48,18 @@
 
                         <tr>
                             <td><p><strong>ProjectName 2B</strong></p></td>
-                            <td><button type="button" class="btn btn-primary ">View REQ
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RequirementsModal">
+                                    View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-info">View Details
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -57,15 +70,23 @@
 
                         <tr>
                             <td><p><strong>ProjectName 3C</strong></p></td>
-                            <td><button type="button" class="btn btn-primary">View REQ
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RequirementsModal">
+                                    View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-info">View Details
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-danger">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                            </td>
                         </tr>
 
 
@@ -73,15 +94,17 @@
                         <tr>
                             <td><p><strong>ProjectName 4D</strong></p></td>
                             <td>
-                            <button type="button" class="btn btn-primary">
-                            View REQ
-                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                            </button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RequirementsModal">
+                                    View REQ
+                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                </button>
                             </td>
-                            <td><button type="button" class="btn btn-info">                                    
-                                View Details
+                            <td>
+                                <button type="button" class="btn btn-info">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -92,12 +115,18 @@
 
                         <tr>
                             <td><p><strong>ProjectName 5E</strong></p></td>
-                            <td><button type="button" class="btn btn-primary">View REQ
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RequirementsModal">
+                                    View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-info">View Details
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -131,6 +160,294 @@
         </div>
     </div>
 </div>
+
+<!-- REQUIREMENTS MODAL!!!!!!!!!!!!!-->
+
+<div class="modal fade" id="RequirementsModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="row text-center">
+                <div class="col-sm-5">
+                    <h3>Functional Requirements</h3>
+
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-success">ADD</button>
+                    </div>
+                    <h3> Current Requirements </h3>
+                    <p>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">FEQ1</a>
+
+
+
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    <p> --------Activity---------------Hours</p>
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">FEQ2</button>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    <p> --------Activity---------------Hours</p>
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                                    <div class="col-sm-2" style="background-color:lavenderblush;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <p>---------------------------------------</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                @*above is the code for the left half of the screen, blow is the code for the partition and back button*@
+                <div class="col-sm-1">
+                    <html>
+                    <head>
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <style>
+                            .vl {
+                                border-right: 6px solid black;
+                                height: 300px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+
+
+                        <div class="vl"></div>
+
+                    </body>
+                </html>
+                <html>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+                        .vl {
+                            border-left: 6px solid black;
+                            height: 300px;
+                        }
+                    </style>
+                </head>
+                <body>
+
+
+
+                    <div class="vl"></div>
+
+                </body>
+            </html>
+            <button type="button" class="btn btn-danger">Back</button>
+        </div>
+        @*Above is the partition, below is the start of the second half of the screen*@
+        <div class="col-sm-5">
+
+            <h3>Non-functional Requirements</h3>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-success">ADD</button>
+            </div>
+
+            <h3> Current Requirements </h3>
+            @* BELOW IS THE CODE FOR THE ACRODIANS, THE FIRST LINE MAKES THE BUTTON, AND THE BODY CONTAINS ALL THE ELEMENTS THAT IT EXPANDS TO*@
+
+
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">FEQ1</a>
+
+
+
+            </p>
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                        <div class="card card-body">
+                            <p> --------Activity---------------Hours</p>
+
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                @* THIS IS THE END OF THE FIRST ACORIAN BUTTON, AND THE START OF THE SECOND ONE*@
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">FEQ2</button>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample4">
+                        <div class="card card-body">
+                            <p> --------Activity---------------Hours</p>
+
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">RE Analysis</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Designing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Coding</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Testing</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                            @*hellosapdiojasofdihpSDOFUIhwepioufgh*@
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4" style="background-color:lavender;">Project Management</div>
+                            <div class="col-sm-2" style="background-color:lavenderblush;">
+                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                            </div>
+                            <div class="col-sm-3"></div>
+                            <p>---------------------------------------</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+
+
 
 
 <div class="modal" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
