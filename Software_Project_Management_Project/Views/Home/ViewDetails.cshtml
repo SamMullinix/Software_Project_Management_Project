@@ -14,18 +14,56 @@
             margin-top: 50px;
             margin-bottom: 75px;
         }
+
+        #project_name_edit{
+            display: none;
+        }
+
+        #description_edit_group{
+            display: none;
+        }
     </style>
+
+    <script>
+
+        function name_edit() {
+
+            document.getElementById("project_name").style.display = "none";
+            document.getElementById("project_name_edit_button").style.display = "none";
+            document.getElementById("project_name_edit").style.display = "flex";
+            document.getElementById("project_name_edit").style.top = "-50px";
+        }
+
+        function description_edit() {
+
+            dcoument.getElementById("description_name").style.display = "none";
+            document.getElementById("description_button").style.display = "none";
+            document.getElementById("description_edit_group").style.display = "flex";
+            document.getElementById("description_edit_group").style.top = "-50px";
+        }
+
+    </script>
 </head>
 
 <body>
 
     <!---Lists the Project Name with the option to edit-->
     <div class="panel panel-primary">
-        <div class="panel-body pull-left">
+        <div class="panel-body pull-left" id="project_name">
             <h4>Project Name</h4>
         </div>
-        <div class="btn-group panel-body pull-right">
-            <button type="button" class="btn btn-primary">Edit</button>
+        <div class="btn-group panel-body pull-right" id="project_name_edit_button">
+            <button type="button" onclick="name_edit()" class="btn btn-primary">Edit</button>
+        </div>
+    </div>
+
+    <div class="input-group" id="project_name_edit">
+        <input type="text" class="form-control" placeholder="Enter Project Name Here">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-success">
+                <span>Save</span>
+
+            </button>
         </div>
     </div>
 
@@ -36,12 +74,22 @@
             <h3>High-Level Description</h3>
         </div>
         <div class="panel-body">
-            <div class="pull-left"><p><strong>Description Text</strong></p></div>
-            <div class="btn-group pull-right">
-                <button type="button" class="btn btn-primary">Edit</button>
+            <div class="pull-left" id="description_name"><p><strong>Description Text</strong></p></div>
+            <div class="btn-group pull-right" id="description_button">
+                <button type="button" onclick="description_edit()" class="btn btn-primary">Edit</button>
             </div>
         </div>
 
+    </div>
+
+    <div class="input-group" id="description_edit_group">
+        <input type="text" class="form-control" placeholder="Enter Description Here">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-success">
+                <span>Save</span>
+
+            </button>
+        </div>
     </div>
 
     <!--Lists the Owners with the option to edit-->
