@@ -1,25 +1,19 @@
-<<<<<<< HEAD:Software_Project_Management_Project/wwwroot/JavaScript.js
-﻿var  = ["Req 1", "Req 2", "Req 3", "Req 4", "Req 5"]
-var str = '<ul>'
+function myFunction() {
+    var table = document.getElementById("mytable");
+    var row = table.insertRow(1);
 
-slides.forEach(function (slide) {
-    str += '<li>' + slide + '</li>';
-});
+    // Cell 1
+    var projectName = row.insertCell(-1);
+    var strong = document.createElement("strong");
+    strong.innerHTML = document.getElementById("newProjectForm").value;
+    projectName.appendChild(strong);
 
-str += '</ul>';
-document.getElementById("slideContainer").innerHTML = str;
-<div id="slideContainer"></div>
-=======
-﻿var throwConnectBox = function () {
-    chat_box = document.getElementById('box');
-    div = window.parent.document.createElement('div');
-    input = window.parent.document.createElement('input');
-    input.type = "submit";
-    input.value = "Join chat";
-    input.onclick = function () { conn.send('$connect\r\n'); };
-    div.appendChild(input);
-    chat_box.appendChild(div);
+    // Cell 2
+    projectName = row.insertCell(-1);
+    strong = document.createElement("strong");
+    strong.innerHTML = document.getElementById("newProjectForm").value;
+    projectName.appendChild(strong);
 }
 
-onload() => console.log("test");
->>>>>>> a597174f616b2107d40e3ff533b65f91e5d21152:Software_Project_Management_Project/wwwroot/js/AddNewReqOnClick.js
+
+document.getElementById("add").onclick = myFunction();

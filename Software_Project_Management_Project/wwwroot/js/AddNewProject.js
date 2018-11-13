@@ -26,4 +26,4 @@ function DeleteRowFunction(obj) {
 
 document.getElementById("reqButton").onclick = function () {
         location.href = "/home/requirmentspage";
-    };
+};
