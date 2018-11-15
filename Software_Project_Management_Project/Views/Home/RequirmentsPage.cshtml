@@ -1,30 +1,39 @@
+<<<<<<< HEAD
 ﻿
 
-<script src="~/wwwroot/js/AddNewReqOnClick.js"></script>
 
 
-
+<script src="js/form.js" type="text/javascript"></script>
+=======
 ﻿@*TO DO LIST
     WIDEN BUTTONS FOR FRQ
     ADD DELETE BUTTON NEXT TO FRQ
     BOLD THE HOURS AND ACTIVITES
     REMOVE DASHES SWITCH TO LINE BREAKERS
 *@
-
+>>>>>>> a3bf36a63f7459514fd840aa59ccc92161b55349
 <div class="container">
     <div class="row text-center">
-        <div class="col-sm-5">
+        <div class="col-sm-5" id="addTo">
             <h3>Functional Requirements</h3>
 
 
             <div class="col-sm-10">
                 <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
             </div>
-            <div class="col-sm-2">
-                <button type="button" class="btn btn-success">ADD</button>
+            <div class="two">
+                <div class="col-sm-2">
+                    <button onclick="createSection()" type="button" class="btn btn-success" id="add">ADD</button>
+                </div>
+            </div>          
+            <div class="third">
+                <form action="" method="get" id="mainform">
+                    <p id="myForm"></p>
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
             <h3> Current Requirements </h3>
-            <p>
+            
 
 
 
@@ -56,17 +65,18 @@
 
 
 
+                <div id="toCopy" style="display:none;">
+                    <div class="col-sm-10">
 
-                <div class="col-sm-10">
+                        <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">FEQ1</a>
 
-                    <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">FEQ1</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-success">Delete</button>
+                    </div>
 
-                </div>
-                <div class="col-sm-2">
-                    <button type="button" class="btn btn-success">Delete</button>
-                </div>
-
-            </p>
+            
+            
             <div class="row">
                 <div class="col">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -117,87 +127,81 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
+        
             <hr class="col-xs-12">
-            <div class="col-sm-10">
-
-                <a class="block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2">FEQ2</a>
-
-            </div>
-            <div class="col-sm-2">
-                <button type="button" class="btn btn-success">Delete</button>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body">
-                            <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
-                            <hr class="col-xs-12">
+                    </div>
+        
 
 
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
-                            <div class="col-sm-2" style="background-color:white;">
-                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+
+                <div>
+                    <div class="col-sm-10">
+
+                        <a class="block" data-togfgle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2">FEQ2</a>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-success">Delete</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                    <hr class="col-xs-12">
+
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                                    <div class="col-sm-2" style="background-color:white;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:white;">Designing</div>
+                                    <div class="col-sm-2" style="background-color:white;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:white;">Coding</div>
+                                    <div class="col-sm-2" style="background-color:white;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                    <div class="col-sm-2" style="background-color:white;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+
+
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4">Project Management</div>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"></div>
-                            <hr class="col-xs-12">
-
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-4" style="background-color:white;">Designing</div>
-                            <div class="col-sm-2" style="background-color:white;">
-                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                            </div>
-                            <div class="col-sm-3"></div>
-                            <hr class="col-xs-12">
-
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-4" style="background-color:white;">Coding</div>
-                            <div class="col-sm-2" style="background-color:white;">
-                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                            </div>
-                            <div class="col-sm-3"></div>
-                            <hr class="col-xs-12">
-
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-4" style="background-color:white;">Testing</div>
-                            <div class="col-sm-2" style="background-color:white;">
-                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                            </div>
-                            <div class="col-sm-3"></div>
-                            <hr class="col-xs-12">
-
-
-                            <div class="col-sm-3"></div>
-                            <div class="col-sm-4">Project Management</div>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                            </div>
-                            <div class="col-sm-3"></div>
-
-
                         </div>
                     </div>
+
+
+
                 </div>
-            </div>
-
-
-
         </div>
         @*above is the code for the left half of the screen, blow is the code for the partition and back button*@
         <div class="col-sm-1">
@@ -248,176 +252,133 @@
     </script>
 </div>
 @*Above is the partition, below is the start of the second half of the screen*@
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-sm-5">
-                    <h3>Non-Functional Requirements</h3>
+<div class="col-sm-5">
+
+    <h3>Non-functional Requirements</h3>
+
+    <div class="col-sm-10">
+        <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
+    </div>
+    <div class="col-sm-2">
+        <button type="button" class="btn btn-success">ADD</button>
+    </div>
+
+    <h3> Current Requirements </h3>
+    @* BELOW IS THE CODE FOR THE ACRODIANS, THE FIRST LINE MAKES THE BUTTON, AND THE BODY CONTAINS ALL THE ELEMENTS THAT IT EXPANDS TO*@
 
 
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">FEQ1</a>
+
+
+
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    <p> --------Activity---------------Hours</p>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
                     </div>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-success">ADD</button>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Designing</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
                     </div>
-                    <h3> Current Requirements </h3>
-                    <p>
-
-
-
-
-
-
-
-                        
-
-
-
-
-
-
-                        <div class="col-sm-10">
-
-                            <a class="block" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="true" aria-controls="multiCollapseExample3">FEQ1</a>
-
-                        </div>
-                        <div class="col-sm-2">
-                            <button type="button" class="btn btn-success">Delete</button>
-                        </div>
-
-                    </p>
-                    <div class="row">
-                        <div class="col">
-                            <div class="collapse multi-collapse" id="multiCollapseExample3">
-                                <div class="card card-body">
-                                    <p> &emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
-                                    <hr class="col-xs-12">
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4">RE Analysis</div>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4">Designing</div>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4">Coding</div>
-                                    <div class="col-sm-2" style="background-color:white;">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4" style="background-color:white;">Testing</div>
-                                    <div class="col-sm-2" style="background-color:white;">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4">Project Management</div>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-                    <hr class="col-xs-12">
-                    <div class="col-sm-10">
-
-                        <a class="block" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="true" aria-controls="multiCollapseExample4">FEQ2</a>
-
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Coding</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
                     </div>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-success">Delete</button>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Testing</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
                     </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
 
-                    <div class="row">
-                        <div class="col">
-                            <div class="collapse multi-collapse" id="multiCollapseExample4">
-                                <div class="card card-body">
-                                    <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
-                                    <hr class="col-xs-12">
-
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
-                                    <div class="col-sm-2" style="background-color:white;">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4" style="background-color:white;">Designing</div>
-                                    <div class="col-sm-2" style="background-color:white;">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4" style="background-color:white;">Coding</div>
-                                    <div class="col-sm-2" style="background-color:white;">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4" style="background-color:white;">Testing</div>
-                                    <div class="col-sm-2" style="background-color:white;">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-                                    <hr class="col-xs-12">
-
-
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-4">Project Management</div>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
-                                    </div>
-                                    <div class="col-sm-3"></div>
-
-
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Project Management</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
                     </div>
-
-
-</div>
-</div>
-</div>
-
-
-
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
                 </div>
+            </div>
+        </div>
 
+
+
+        @* THIS IS THE END OF THE FIRST ACORIAN BUTTON, AND THE START OF THE SECOND ONE*@
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">FEQ2</button>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                    <p> --------Activity---------------Hours</p>
+
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Designing</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Coding</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Testing</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                    @*hellosapdiojasofdihpSDOFUIhwepioufgh*@
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4" style="background-color:white;">Project Management</div>
+                    <div class="col-sm-2" style="background-color:white;">
+                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <p>---------------------------------------</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+
+<script>
+    function createSection() {
+  
+        let div = document.createElement('div');
+        div.innerHTML = document.getElementById('toCopy').innerHTML;
+        document.getElementById('addTo').appendChild(div);
+        console.log(div)
+    }
+</script>
