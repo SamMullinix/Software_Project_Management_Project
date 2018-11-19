@@ -15,31 +15,67 @@
             margin-bottom: 75px;
         }
 
-        #project_name_edit{
-            display: none;
+        .row{
+            margin-top: 20px;
         }
 
         #description_edit_group{
-            display: none;
+            
+            margin-top: 30px;
+        }
+
+        #description_submit{
+
+            margin-top: 10px;
+            
+        }
+
+        #project_edit_button{
+
+            display:none;
         }
     </style>
 
     <script>
 
-        function name_edit() {
-
-            document.getElementById("project_name").style.display = "none";
-            document.getElementById("project_name_edit_button").style.display = "none";
-            document.getElementById("project_name_edit").style.display = "flex";
-            document.getElementById("project_name_edit").style.top = "-50px";
+        function DeleteRowFunction(obj) {
+            var p = obj.parentNode.parentNode;
+            p.parentNode.removeChild(p);
         }
 
-        function description_edit() {
+        function addFunction() {
+            var table = document.getElementById("mytable");
+            var row = table.insertRow(1);
 
-            dcoument.getElementById("description_name").style.display = "none";
-            document.getElementById("description_button").style.display = "none";
-            document.getElementById("description_edit_group").style.display = "flex";
-            document.getElementById("description_edit_group").style.top = "-50px";
+            // Cell 1
+            var projectName = row.insertCell(-1);
+            var strong = document.createElement("strong");
+            strong.innerHTML = document.getElementById("add").value;
+            projectName.appendChild(strong);
+        }
+
+        function printing() {
+
+            var x = document.getElementById("myText").value;
+            document.getElementById("demo").innerHTML = x;
+            document.getElementById("project_name_edit").style.display = "none";
+            document.getElementById("project_name_header").style.display = "none";
+            document.getElementById("project_edit_button").style.display = "inline";
+        }
+
+       function editing() {
+            document.getElementById("project_name_edit").style.display = "flex";
+            dcoument.getElementById("demo").style.display = "none";
+            document.getElementById("project_edit_button").style.display = "none";
+        }
+
+        function description_editing() {
+
+            var z = document.getElementById("description").value;
+            document.getElementById("description_demo").style.marginTop = "10px";
+            document.getElementById("description_demo").style.marginLeft = "10px";
+            document.getElementById("description_demo").innerHTML = z;
+            document.getElementById("description_edit_group").style.display = "none";
         }
 
     </script>
@@ -48,49 +84,42 @@
 <body>
 
     <!---Lists the Project Name with the option to edit-->
-    <div class="panel panel-primary">
-        <div class="panel-body pull-left" id="project_name">
-            <h4>Project Name</h4>
-        </div>
-        <div class="btn-group panel-body pull-right" id="project_name_edit_button">
-            <button type="button" onclick="name_edit()" class="btn btn-primary">Edit</button>
-        </div>
-    </div>
 
+    <h3 id="project_name_header">Project Name</h3>
+    <h3 id="demo"></h3>
     <div class="input-group" id="project_name_edit">
-        <input type="text" class="form-control" placeholder="Enter Project Name Here">
+        <input type="text" class="form-control" placeholder="Enter Project Name Here" id="myText">
         <div class="input-group-btn">
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success" onclick="printing()">
                 <span>Save</span>
 
             </button>
         </div>
     </div>
 
+    <button type="button" class="btn btn-primary" onclick="editing()" id="project_edit_button"><span>Edit</span></button>
 
     <!--Lists the High Level Description with the option to edit-->
     <div class="panel panel-primary">
         <div class="panel-heading" style="padding-top: 10px;">
             <h3>High-Level Description</h3>
         </div>
-        <div class="panel-body">
-            <div class="pull-left" id="description_name"><p><strong>Description Text</strong></p></div>
-            <div class="btn-group pull-right" id="description_button">
-                <button type="button" onclick="description_edit()" class="btn btn-primary">Edit</button>
-            </div>
-        </div>
 
-    </div>
+        <p id="description_demo"></p>
 
-    <div class="input-group" id="description_edit_group">
-        <input type="text" class="form-control" placeholder="Enter Description Here">
-        <div class="input-group-btn">
-            <button type="button" class="btn btn-success">
-                <span>Save</span>
+        <div class="form-group" id="description_edit_group">
+
+            <textarea class="form-control" rows="5" placeholder="Enter Description Here" id="description"></textarea>
+
+            <button type="button" class="btn btn-success" id="description_submit" onclick="description_editing()">
+                <span>Submit</span>
 
             </button>
+
         </div>
     </div>
+
+
 
     <!--Lists the Owners with the option to edit-->
     <div class="panel panel-primary">
@@ -100,26 +129,39 @@
         <div class="owner">
             <!--Entering new owner-->
             <div class="panel-body">
-                <div class="input-group">
+                <!--<div class="input-group">
                     <input type="text" class="form-control" placeholder="Enter New Owner Here">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-success">
+                        <button type="button" class="btn btn-success" onclick="addFunction()" id="add">
                             <span class="glyphicon glyphicon-plus"></span>
 
                         </button>
                     </div>
-                </div>
-
-
+                </div>-->
                 <!--Lists of current owner-->
 
                 <div class="table-responsive">
-                    <table id="owner-table" class="table table-hover table-dark table-striped">
+                    <table id="mytable" class="table table-hover table-dark table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="add">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-success" onclick="addFunction()">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+
+                        </thead>
                         <tbody>
                             <tr>
                                 <td class="col-lg-8"><p><strong>Owner Name</strong></p></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -139,7 +181,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Enter New Member Here">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-success">
+                        <button type="button" class="btn btn-success" onclick="addFunction()" id="add">
                             <span class="glyphicon glyphicon-plus"></span>
 
                         </button>
@@ -154,7 +196,7 @@
                             <tr>
                                 <td class="col-lg-8"><p><strong>Member Name</strong></p></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -170,7 +212,7 @@
             <h3>Risks</h3>
         </div>
         <div class="risks">
-            <!--Entering new team member-->
+            <!--Entering new risk and risk status
             <div class="panel-body">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Enter New Risk Here">
@@ -180,20 +222,44 @@
 
                         </button>
                     </div>
-                </div>
+                </div>-->
 
-                <div class="table-responsive">
-                    <table id="risk-table" class="table table-hover table-dark table-striped">
-                        <tbody>
-                            <tr>
-                                <td class="col-lg-4"><p><strong>Risk Name</strong></p></td>
-                                <td class="col-lg-4"><p><strong>Risk Status</strong></p></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+
+            <form>
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <input type="text" class="form-control" placeholder="Enter New Risk Here">
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <input type="text" class="form-control" placeholder="Enter Risk Status Here">
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-success">
+                                <span>Save</span>
+
+                            </button>
+                        </div>
+                    </div>
                 </div>
+            </form>
+
+
+
+            <div class="table-responsive">
+                <table id="risk-table" class="table table-hover table-dark table-striped">
+                    <tbody>
+                        <tr>
+                            <td class="col-lg-4"><p><strong>Risk Name</strong></p></td>
+                            <td class="col-lg-4"><p><strong>Risk Status</strong></p></td>
+                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                            <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
