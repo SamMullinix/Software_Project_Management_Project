@@ -41,14 +41,12 @@
         }
     </style>
 
-    <script>
-
-        function DeleteRowFunction(obj) {
+    <script>function DeleteRowFunction(obj) {
             var p = obj.parentNode.parentNode;
             p.parentNode.removeChild(p);
-        }
+}
 
-        function addOwnerFunction() {
+function addOwnerFunction() {
             var ownerTable = document.getElementById("myOwnertable");
             var row = ownerTable.insertRow(1);
 
@@ -57,9 +55,19 @@
             var strong = document.createElement("strong");
             strong.innerHTML = document.getElementById("addOwner").value;
             ownerName.appendChild(strong);
-        }
 
-        function addMemberFunction() {
+            // Cell 2 For Edit Button
+
+            var editButton = row.insertCell(-1);
+            editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit()'>Edit</button>"
+
+
+            // Cell 3 For Delete Button
+            var deleteButton = row.insertCell(-1);
+            deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
+}
+
+function addMemberFunction() {
             var memberTable = document.getElementById("myMembertable");
             var row = memberTable.insertRow(1);
 
@@ -68,9 +76,19 @@
             var strong = document.createElement("strong");
             strong.innerHTML = document.getElementById("addMember").value;
             memberName.appendChild(strong);
-        }
 
-        function addRiskFunction() {
+            // Cell 2 For Edit Button
+
+            var editButton = row.insertCell(-1);
+            editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit()'>Edit</button>"
+
+
+            // Cell 3 For Delete Button
+            var deleteButton = row.insertCell(-1);
+            deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
+}
+
+function addRiskFunction() {
             var riskTable = document.getElementById("myRisktable");
             var row = riskTable.insertRow(1);
 
@@ -83,42 +101,50 @@
             // Cell 2
             var riskStatus = row.insertCell(-1);
             var weak = document.createElement("strong");
-            weak.innerHTML = document.getElementById("addRisk").value;
+            weak.innerHTML = document.getElementById("addRiskStatus").value;
             riskStatus.appendChild(weak);
-        }
 
-        function printing() {
+            // Cell 3 For Edit Button
+
+            var editButton = row.insertCell(-1);
+            editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit()'>Edit</button>"
+
+
+            // Cell 4 For Delete Button
+            var deleteButton = row.insertCell(-1);
+            deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
+}
+
+function printing() {
 
             var x = document.getElementById("myText").value;
             document.getElementById("demo").innerHTML = x;
             document.getElementById("project_name_edit").style.display = "none";
             document.getElementById("project_name_header").style.display = "none";
             document.getElementById("project_edit_button").style.display = "inline";
-        }
+}
 
-       function editing() {
+function editing() {
             document.getElementById("project_name_edit").style.display = "flex";
             dcoument.getElementById("demo").style.display = "none";
             document.getElementById("project_edit_button").style.display = "none";
-        }
+}
 
-        function description_editing() {
+function description_editing() {
 
             var z = document.getElementById("description").value;
             document.getElementById("description_demo").style.marginTop = "10px";
             document.getElementById("description_demo").style.marginLeft = "10px";
             document.getElementById("description_demo").innerHTML = z;
             document.getElementById("description_edit_group").style.display = "none";
-        }
+}
 
-        function table_edit() {
+function table_edit() {
 
             var y = document.getElementById("editOwnerName").value;
             document.getElementById("tableEditGroup").style.display = "inline";
             document.getElementById("name_field").style.display = "none";
-        }
-
-    </script>
+}</script>
 </head>
 
 <body>
