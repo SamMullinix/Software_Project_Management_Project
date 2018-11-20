@@ -100,8 +100,10 @@ function addRiskFunction() {
 
             // Cell 2
             var riskStatus = row.insertCell(-1);
-            var weak = document.createElement("strong");
-            weak.innerHTML = document.getElementById("addRiskStatus").value;
+
+            var weak = document.createElement("p");
+            weak.innerHTML = "Status: <strong>" + document.getElementById("addRiskStatus").value + "</strong>";
+
             riskStatus.appendChild(weak);
 
             // Cell 3 For Edit Button
@@ -202,8 +204,8 @@ function table_edit() {
                 <div class="table-responsive">
                     <table id="myOwnertable" class="table table-hover table-dark table-striped">
                         <thead class="thead-dark">
-                            <tr>
-                                <th>
+                            <tr>                             
+                                <th>                                  
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Enter New Owner Here" id="addOwner">
                                         <div class="input-group-btn">
@@ -214,11 +216,14 @@ function table_edit() {
                                     </div>
                                 </th>
                             </tr>
+                            <tr>
+                                <th><p style="font-size: 150%;">Owner Name</p></th>
+                            </tr>
 
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-lg-8" id="name_field"><p><strong>Owner Name</strong></p></td>
+                                <td class="col-lg-8" id="name_field"><p><strong>John Doe</strong></p></td>
                                 <td id="tableEditGroup">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Enter New Owner Here" id="editOwnerName">
@@ -259,10 +264,13 @@ function table_edit() {
                                     </div>
                                 </th>
                             </tr>
+                            <tr>
+                                <th><p style="font-size: 150%;">Team Member Names</p></th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-lg-8"><p><strong>Member Name</strong></p></td>
+                                <td class="col-lg-8"><p><strong>Jim Walden</strong></p></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
@@ -286,7 +294,7 @@ function table_edit() {
             <div class="table-responsive">
                 <table id="myRisktable" class="table table-hover table-dark table-striped">
                     <thead class="thead-dark">
-                        <tr>
+                        <tr>                         
                            <td>
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Enter New Risk Here" id="addRisk">
@@ -296,7 +304,7 @@ function table_edit() {
                             </td>
                             <td>
                                <div class="input-group">
-                                   <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="addRiskStatus" />
+                                   <input type="text" class="form-control" placeholder="Enter New Risk Status" id="addRiskStatus" />
                                </div>
                             </td>
 
@@ -309,11 +317,12 @@ function table_edit() {
                            </td>
                            
                         </tr>
+
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="col-lg-4"><p><strong>Risk Name</strong></p></td>
-                            <td class="col-lg-4"><p><strong>Risk Status</strong></p></td>
+                            <td class="col-lg-4"><p><strong>Lack of Support For Architecture</strong></p></td>
+                            <td class="col-lg-4"><p>Status: <strong class="text-danger">At Risk</strong></p></td>
                             <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
                             <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                         </tr>
