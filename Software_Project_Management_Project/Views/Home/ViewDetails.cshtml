@@ -34,6 +34,11 @@
 
             display:none;
         }
+
+        #tableEditGroup{
+
+            display:none;
+        }
     </style>
 
     <script>
@@ -43,15 +48,43 @@
             p.parentNode.removeChild(p);
         }
 
-        function addFunction() {
-            var table = document.getElementById("mytable");
-            var row = table.insertRow(1);
+        function addOwnerFunction() {
+            var ownerTable = document.getElementById("myOwnertable");
+            var row = ownerTable.insertRow(1);
 
             // Cell 1
-            var projectName = row.insertCell(-1);
+            var ownerName = row.insertCell(-1);
             var strong = document.createElement("strong");
-            strong.innerHTML = document.getElementById("add").value;
-            projectName.appendChild(strong);
+            strong.innerHTML = document.getElementById("addOwner").value;
+            ownerName.appendChild(strong);
+        }
+
+        function addMemberFunction() {
+            var memberTable = document.getElementById("myMembertable");
+            var row = memberTable.insertRow(1);
+
+            // Cell 1
+            var memberName = row.insertCell(-1);
+            var strong = document.createElement("strong");
+            strong.innerHTML = document.getElementById("addMember").value;
+            memberName.appendChild(strong);
+        }
+
+        function addRiskFunction() {
+            var riskTable = document.getElementById("myRisktable");
+            var row = riskTable.insertRow(1);
+
+            // Cell 1
+            var riskName = row.insertCell(-1);
+            var strong = document.createElement("strong");
+            strong.innerHTML = document.getElementById("addRisk").value;
+            riskName.appendChild(strong);
+
+            // Cell 2
+            var riskStatus = row.insertCell(-1);
+            var weak = document.createElement("strong");
+            weak.innerHTML = document.getElementById("addRisk").value;
+            riskStatus.appendChild(weak);
         }
 
         function printing() {
@@ -76,6 +109,13 @@
             document.getElementById("description_demo").style.marginLeft = "10px";
             document.getElementById("description_demo").innerHTML = z;
             document.getElementById("description_edit_group").style.display = "none";
+        }
+
+        function table_edit() {
+
+            var y = document.getElementById("editOwnerName").value;
+            document.getElementById("tableEditGroup").style.display = "inline";
+            document.getElementById("name_field").style.display = "none";
         }
 
     </script>
@@ -127,28 +167,21 @@
             <h3>Owner</h3>
         </div>
         <div class="owner">
+
             <!--Entering new owner-->
             <div class="panel-body">
-                <!--<div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter New Owner Here">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-success" onclick="addFunction()" id="add">
-                            <span class="glyphicon glyphicon-plus"></span>
 
-                        </button>
-                    </div>
-                </div>-->
                 <!--Lists of current owner-->
 
                 <div class="table-responsive">
-                    <table id="mytable" class="table table-hover table-dark table-striped">
+                    <table id="myOwnertable" class="table table-hover table-dark table-striped">
                         <thead class="thead-dark">
                             <tr>
                                 <th>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="add">
+                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="addOwner">
                                         <div class="input-group-btn">
-                                            <button type="button" class="btn btn-success" onclick="addFunction()">
+                                            <button type="button" class="btn btn-success" onclick="addOwnerFunction()">
                                                 <span class="glyphicon glyphicon-plus"></span>
                                             </button>
                                         </div>
@@ -159,8 +192,15 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-lg-8"><p><strong>Owner Name</strong></p></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-8" id="name_field"><p><strong>Owner Name</strong></p></td>
+                                <td id="tableEditGroup">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="editOwnerName">
+
+
+                                    </div>
+                                </td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                         </tbody>
@@ -178,20 +218,22 @@
         <div class="team">
             <!--Entering new team member-->
             <div class="panel-body">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter New Member Here">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-success" onclick="addFunction()" id="add">
-                            <span class="glyphicon glyphicon-plus"></span>
-
-                        </button>
-                    </div>
-                </div>
-
-
-                <!--Lists of current team members-->
                 <div class="table-responsive">
-                    <table id="member-table" class="table table-hover table-dark table-striped">
+                    <table id="myMembertable" class="table table-hover table-dark table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="addMember">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-success" onclick="addMemberFunction()">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td class="col-lg-8"><p><strong>Member Name</strong></p></td>
@@ -212,45 +254,36 @@
             <h3>Risks</h3>
         </div>
         <div class="risks">
-            <!--Entering new risk and risk status
-            <div class="panel-body">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter New Risk Here">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-success">
-                            <span class="glyphicon glyphicon-plus"></span>
-
-                        </button>
-                    </div>
-                </div>-->
-
-
-
-            <form>
-                <div class="row">
-                    <div class="form-group col-lg-4">
-                        <input type="text" class="form-control" placeholder="Enter New Risk Here">
-                    </div>
-
-                    <div class="form-group col-lg-4">
-                        <input type="text" class="form-control" placeholder="Enter Risk Status Here">
-                    </div>
-
-                    <div class="form-group col-lg-4">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-success">
-                                <span>Save</span>
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-
-
+            <!--Entering new risk and risk status-->
+   
 
             <div class="table-responsive">
-                <table id="risk-table" class="table table-hover table-dark table-striped">
+                <table id="myRisktable" class="table table-hover table-dark table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                           <td>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="addRisk">
+                                    
+                                    
+                                </div>
+                            </td>
+                            <td>
+                               <div class="input-group">
+                                   <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="addRiskStatus" />
+                               </div>
+                            </td>
+
+                           <td>
+                               <div class="input-group-btn">
+                                   <button type="button" class="btn btn-success" onclick="addRiskFunction()">
+                                       <span class="glyphicon glyphicon-plus"></span>
+                                   </button>
+                               </div>
+                           </td>
+                           
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
                             <td class="col-lg-4"><p><strong>Risk Name</strong></p></td>
