@@ -14,7 +14,7 @@
             <h3>Functional Requirements</h3>
 
             <div class="col-sm-10">
-                <input type="text" class="form-control text-center" id="toCopy" placeholder="Enter Requirement" name="pwd">
+                <input type="text" class="form-control text-center" placeholder="Enter Requirement" name="pwd">
             </div>
             <div class="col-sm-2">
                 <button type="button" class="btn btn-success" onclick="createSection()">ADD</button>
@@ -45,7 +45,7 @@
                 </style>
 
 
-
+                <div id="toCopy">
                 <div class="col-sm-10">
                     <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">FEQ1</a>
                 </div>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
 
 
 
@@ -342,7 +342,7 @@
 <script>function createSection() {
 
         let div = document.createElement('div');
-        div.innerHTML = document.getElementById('toCopy').value;
+        div.innerHTML =  document.getElementById('toCopy').innerHTML;
         document.getElementById('addTo').appendChild(div);
         console.log(div)
 }</script>
