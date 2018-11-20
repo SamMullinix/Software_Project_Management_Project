@@ -10,14 +10,14 @@
 
 <div class="container">
     <div class="row text-center">
-        <div class="col-sm-5">
+        <div class="col-sm-5" id="addTo">
             <h3>Functional Requirements</h3>
 
             <div class="col-sm-10">
-                <input type="text" class="form-control text-center" id="pwd" placeholder="Enter Requirement" name="pwd">
+                <input type="text" class="form-control text-center" id="toCopy" placeholder="Enter Requirement" name="pwd">
             </div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success">ADD</button>
+                <button type="button" class="btn btn-success" onclick="createSection()">ADD</button>
             </div>
             <h3> Current Requirements </h3>
             <p>
@@ -342,7 +342,7 @@
 <script>function createSection() {
 
         let div = document.createElement('div');
-        div.innerHTML = document.getElementById('toCopy').innerHTML;
+        div.innerHTML = document.getElementById('toCopy').value;
         document.getElementById('addTo').appendChild(div);
         console.log(div)
 }</script>
