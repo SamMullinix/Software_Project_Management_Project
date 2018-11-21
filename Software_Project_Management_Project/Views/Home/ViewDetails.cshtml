@@ -37,17 +37,58 @@
             display:none;
         }
 
+        #description_edit_button{
+
+            display:none;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
         #tableEditGroup{
 
             display:none;
         }
 
+        #new_Name{
+
+            display:none;
+        }
+
+        #table_save{
+
+            display:none;
+        }
+
+        #risk_Edit_group{
+
+            display:none;
+        }
+
+        #risk_Edit_Status_group{
+
+            display:none;
+        }
+
+        #risk_Name{
+
+            display:none;
+        }
+
+        #risk_Status{
+
+            display:none;
+        }
+
+        #risk_Save_button{
+
+            display:none;
+        }
     </style>
 
     <script>function DeleteRowFunction(obj) {
             var p = obj.parentNode.parentNode;
             p.parentNode.removeChild(p);
-}
+        }
 
 function addOwnerFunction() {
             var ownerTable = document.getElementById("myOwnertable");
@@ -62,7 +103,7 @@ function addOwnerFunction() {
             // Cell 2 For Edit Button
 
             var editButton = row.insertCell(-1);
-            editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit()'>Edit</button>"
+            editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit_row()'>Edit</button>"
 
 
             // Cell 3 For Delete Button
@@ -131,25 +172,84 @@ function printing() {
 
 function editing() {
             document.getElementById("project_name_edit").style.display = "flex";
-            dcoument.getElementById("demo").style.display = "none";
             document.getElementById("project_edit_button").style.display = "none";
 }
 
-function description_editing() {
+function description_printing() {
 
             var z = document.getElementById("description").value;
             document.getElementById("description_demo").style.marginTop = "10px";
             document.getElementById("description_demo").style.marginLeft = "10px";
             document.getElementById("description_demo").innerHTML = z;
             document.getElementById("description_edit_group").style.display = "none";
-}
+            document.getElementById("description_edit_button").style.display = "inline";
+        }
+
+        function description_editing() {
+
+            document.getElementById("description_edit_group").style.display = "inherit";
+            document.getElementById("description_edit_group").style.marginLeft = "10px";
+            document.getElementById("description_edit_group").style.marginBottom = "10px";
+            document.getElementById("description_edit_button").style.display = "none";
+            
+        }
+
+        function table_edit_row(obj) {
+            var a = obj.parentNode.parentNode;
+            a.parentNode.table_edit(a);
+        }
 
 function table_edit() {
 
-            var y = document.getElementById("editOwnerName").value;
-            document.getElementById("tableEditGroup").style.display = "inline";
+            var y = document.getElementById("editName").value;
+            document.getElementById("new_Name").innerHTML = y;
+            
+            document.getElementById("tableEditGroup").style.display = "inherit";
             document.getElementById("name_field").style.display = "none";
-}</script>
+            
+            document.getElementById("table_edit_button").style.display = "none";
+            document.getElementById("table_save").style.display = "table-cell";
+        }
+
+        function table_save() {
+
+            
+            document.getElementById("new_Name").style.display = "table-cell";
+            document.getElementById("editName").style.display = "none";
+            document.getElementById("table_edit_button").style.display = "table-cell";
+            document.getElementById("table_save").style.display = "none";
+        }
+
+        function risk_table_edit() {
+
+            var r = document.getElementById("editRisk").value;
+            document.getElementById("risk_Name").innerHTML = r;
+
+            var s = document.getElementById("edit_Risk_Status").value;
+            document.getElementById("risk_Status").innerHTML = s;
+
+            document.getElementById("risk_Edit_group").style.display = "table-cell";
+            document.getElementById("risk_Edit_Status_group").style.display = "table-cell";
+
+            document.getElementById("risk_demo").style.display = "none";
+            document.getElementById("status_demo").style.display = "none";
+
+            document.getElementById("risk_Edit_button").style.display = "none";
+            document.getElementById("risk_Save_button").style.display = "table-cell";
+        }
+
+        function risk_table_save() {
+
+            document.getElementById("risk_Name").style.display = "table-cell";
+            document.getElementById("risk_Status").style.display = "table-cell";
+
+            document.getElementById("risk_Edit_group").style.display = "none";
+            document.getElementById("risk_Edit_Status_group").style.display = "none";
+
+            document.getElementById("risk_Edit_button").style.display = "table-cell";
+            document.getElementById("risk_Save_button").style.display = "none";
+        }
+    </script>
 </head>
 
 <body>
@@ -182,12 +282,14 @@ function table_edit() {
 
             <textarea class="form-control" rows="5" placeholder="Enter Description Here" id="description"></textarea>
 
-            <button type="button" class="btn btn-success" id="description_submit" onclick="description_editing()">
+            <button type="button" class="btn btn-success" id="description_submit" onclick="description_printing()">
                 <span>Submit</span>
 
             </button>
 
         </div>
+
+        <button type="button" class="btn btn-primary" onclick="description_editing()" id="description_edit_button"><span>Edit</span></button>
     </div>
 
 
@@ -224,14 +326,16 @@ function table_edit() {
                         <tbody>
                             <tr>
                                 <td class="col-lg-8" id="name_field"><p><strong>John Doe</strong></p></td>
+                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                               
                                 <td id="tableEditGroup">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="editOwnerName">
-
-
+                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="editName">
                                     </div>
                                 </td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+
+                                <td id="table_edit_button"class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                <td id="table_save" class="col-lg-1"><button type="button" class="btn btn-success" onclick="table_save()">Save</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                         </tbody>
@@ -268,17 +372,41 @@ function table_edit() {
                         <tbody>
                             <tr>
                                 <td class="col-lg-8"><p><strong>Jim Walden</strong></p></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                                <td id="tableEditGroup">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+
+
+                                    </div>
+                                </td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                             <tr>
                                 <td class="col-lg-8"><p><strong>Amanda Pierce</strong></p></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                                <td id="tableEditGroup">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+
+
+                                    </div>
+                                </td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                             <tr>
                                 <td class="col-lg-8"><p><strong>Alex Smith</strong></p></td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                                <td id="tableEditGroup">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+
+
+                                    </div>
+                                </td>
+                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
 
@@ -329,27 +457,84 @@ function table_edit() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="col-lg-4"><p><strong>Lack of Support For Architecture</strong></p></td>
-                            <td class="col-lg-4"><p>Status: <strong class="text-danger">At Risk</strong></p></td>
-                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                            <td class="col-lg-4" id="risk_demo"><p><strong>Lack of Support For Architecture</strong></p></td>
+                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                            <td id="risk_Edit_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                </div>
+                            </td>
+                            <td class="col-lg-4" id="status_demo"><p>Status: <strong class="text-danger">At Risk</strong></p></td>
+                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                            <td id="risk_Edit_Status_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                </div>
+                            </td>
+                            <td id="risk_Edit_button" class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
                             <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                         </tr>
                         <tr>
                             <td class="col-lg-4"><p><strong>Vendor Server Maintenece</strong></p></td>
+                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                            <td id="risk_Edit_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                </div>
+                            </td>
                             <td class="col-lg-4"><p>Status: <strong class="text-warning">Moderate</strong></p></td>
-                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                            <td id="risk_Edit_Status_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                </div>
+                            </td>
+
+                            <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
                             <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                         </tr>
                         <tr>
                             <td class="col-lg-4"><p><strong>Product Liscence Expires</strong></p></td>
+                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                            <td id="risk_Edit_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                </div>
+                            </td>
+
                             <td class="col-lg-4"><p>Status: <strong class="text-success">Low Risk</strong></p></td>
-                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                            <td id="risk_Edit_Status_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                </div>
+                            </td>
+
+                            <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
                             <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                         </tr>
                         <tr>
                             <td class="col-lg-4"><p><strong>Developer Leaves Team</strong></p></td>
+                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                            <td id="risk_Edit_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                </div>
+                            </td>
+
                             <td class="col-lg-4"><p>Status: <strong class="text-info">Not Assessed</strong></p></td>
-                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
+                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                            <td id="risk_Edit_Status_group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                </div>
+                            </td>
+
+                            <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
                             <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                         </tr>
                     </tbody>
