@@ -49,7 +49,7 @@
                             <td><button type="button" class="btn btn-primary ">View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal">View Details
+                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Tim Watson', 'ProjectOwnerID', 'Andrew Jones', 'Member1', 'Sandra Lockhart', 'Member2', 'Casey Driton', 'Member3')">View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
                                 </button></td>
                             <td>
@@ -65,7 +65,7 @@
                             <td><button type="button" class="btn btn-primary">View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal">View Details
+                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Abby Trabing', 'ProjectOwnerID', 'Trent Chald', 'Member1', 'Dex Pilling', 'Member2', 'Hector Green', 'Member3')">View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
                                 </button></td>
                             <td><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
@@ -83,7 +83,7 @@
                                 <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                             </button>
                             </td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal">                                    
+                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Richard Thames', 'ProjectOwnerID', 'Sam Ressing', 'Member1', 'Becca Newsome', 'Member2', 'Daniel Bronner', 'Member3')">                                    
                                 View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
                                 </button></td>
@@ -100,7 +100,7 @@
                             <td><button type="button" class="btn btn-primary">View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal">View Details
+                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Jackson Grey', 'ProjectOwnerID', 'Phillip Harkingson', 'Member1', 'Yu Xi', 'Member2', 'Weber Brown', 'Member3')">View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
                                 </button></td>
                             <td>
@@ -137,7 +137,7 @@
     </div>
 </div>
 
-
+@*Project 1 Modal*@
 <div class="modal fade" id="viewDetailsModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -147,132 +147,496 @@
             </div>
             <div class="modal-body">
                 <!---Lists the Project Name with the option to edit-->
-                 <style>
-                     .input-group {
-                         margin-bottom: 30px;
-                     }
+                <style>
+                    .input-group {
+                        margin-bottom: 30px;
+                    }
 
-                     .panel {
-                         margin-top: 50px;
-                         margin-bottom: 75px;
-                     }
-                 </style>
-                <div class="panel panel-primary">
-                    <div class="panel-body pull-left">
-                        <h4>Project Name</h4>
-                    </div>
-                    <div class="btn-group panel-body pull-right">
-                        <button type="button" class="btn btn-primary">Edit</button>
-                    </div>
-                </div>
+                    .panel {
+                        margin-top: 50px;
+                        margin-bottom: 75px;
+                    }
 
-                <!--Lists the High Level Description with the option to edit-->
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="padding-top: 10px;">
-                        <h3>High-Level Description</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="pull-left"><p><strong>Description Text</strong></p></div>
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-primary">Edit</button>
+                    .row {
+                        margin-top: 20px;
+                    }
+
+                    #description_edit_group {
+                        margin-top: 20px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+
+                    #description_submit {
+                        margin-top: 10px;
+                    }
+
+                    #project_edit_button {
+                        display: none;
+                    }
+
+                    #description_edit_button {
+                        display: none;
+                        margin-left: 10px;
+                        margin-bottom: 10px;
+                    }
+
+                    #tableEditGroup {
+                        display: none;
+                    }
+
+                    #new_Name {
+                        display: none;
+                    }
+
+                    #table_save {
+                        display: none;
+                    }
+
+                    #risk_Edit_group {
+                        display: none;
+                    }
+
+                    #risk_Edit_Status_group {
+                        display: none;
+                    }
+
+                    #risk_Name {
+                        display: none;
+                    }
+
+                    #risk_Status {
+                        display: none;
+                    }
+
+                    #risk_Save_button {
+                        display: none;
+                    }
+                </style>
+                <script>function DeleteRowFunction(obj) {
+                        var p = obj.parentNode.parentNode;
+                        p.parentNode.removeChild(p);
+}
+
+function addOwnerFunction() {
+                        var ownerTable = document.getElementById("myOwnertable");
+                        var row = ownerTable.insertRow(1);
+
+                        // Cell 1
+                        var ownerName = row.insertCell(-1);
+                        var strong = document.createElement("strong");
+                        strong.innerHTML = document.getElementById("addOwner").value;
+                        ownerName.appendChild(strong);
+
+                        // Cell 2 For Edit Button
+
+                        var editButton = row.insertCell(-1);
+                        editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit_row()'>Edit</button>"
+
+
+                        // Cell 3 For Delete Button
+                        var deleteButton = row.insertCell(-1);
+                        deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
+}
+
+function addMemberFunction() {
+                        var memberTable = document.getElementById("myMembertable");
+                        var row = memberTable.insertRow(1);
+
+                        // Cell 1
+                        var memberName = row.insertCell(-1);
+                        var strong = document.createElement("strong");
+                        strong.innerHTML = document.getElementById("addMember").value;
+                        memberName.appendChild(strong);
+
+                        // Cell 2 For Edit Button
+
+                        var editButton = row.insertCell(-1);
+                        editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit()'>Edit</button>"
+
+
+                        // Cell 3 For Delete Button
+                        var deleteButton = row.insertCell(-1);
+                        deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
+}
+
+function addRiskFunction() {
+                        var riskTable = document.getElementById("myRisktable");
+                        var row = riskTable.insertRow(1);
+
+                        // Cell 1
+                        var riskName = row.insertCell(-1);
+                        var strong = document.createElement("strong");
+                        strong.innerHTML = document.getElementById("addRisk").value;
+                        riskName.appendChild(strong);
+
+                        // Cell 2
+                        var riskStatus = row.insertCell(-1);
+
+                        var weak = document.createElement("p");
+                        weak.innerHTML = "Status: <strong>" + document.getElementById("addRiskStatus").value + "</strong>";
+
+                        riskStatus.appendChild(weak);
+
+                        // Cell 3 For Edit Button
+
+                        var editButton = row.insertCell(-1);
+                        editButton.innerHTML = "<button type='button' class='btn btn-primary' onclick='table_edit()'>Edit</button>"
+
+
+                        // Cell 4 For Delete Button
+                        var deleteButton = row.insertCell(-1);
+                        deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
+}
+
+function printing() {
+
+                        var x = document.getElementById("myText").value;
+                        document.getElementById("demo").innerHTML = x;
+                        document.getElementById("project_name_edit").style.display = "none";
+                        document.getElementById("project_name_header").style.display = "none";
+                        document.getElementById("project_edit_button").style.display = "inline";
+}
+
+function editing() {
+                        document.getElementById("project_name_edit").style.display = "flex";
+                        document.getElementById("project_edit_button").style.display = "none";
+}
+
+function description_printing() {
+
+                        var z = document.getElementById("description").value;
+                        document.getElementById("description_demo").style.marginTop = "10px";
+                        document.getElementById("description_demo").style.marginLeft = "10px";
+                        document.getElementById("description_demo").innerHTML = z;
+                        document.getElementById("description_edit_group").style.display = "none";
+                        document.getElementById("description_edit_button").style.display = "inline";
+}
+
+function description_editing() {
+
+                        document.getElementById("description_edit_group").style.display = "inherit";
+                        document.getElementById("description_edit_group").style.marginLeft = "10px";
+                        document.getElementById("description_edit_group").style.marginBottom = "10px";
+                        document.getElementById("description_edit_button").style.display = "none";
+
+}
+
+function table_edit_row(obj) {
+                        var a = obj.parentNode.parentNode;
+                        a.parentNode.table_edit(a);
+}
+
+function table_edit() {
+
+                        var y = document.getElementById("editName").value;
+                        document.getElementById("new_Name").innerHTML = y;
+
+                        document.getElementById("tableEditGroup").style.display = "inherit";
+                        document.getElementById("name_field").style.display = "none";
+
+                        document.getElementById("table_edit_button").style.display = "none";
+                        document.getElementById("table_save").style.display = "table-cell";
+}
+
+function table_save() {
+
+
+                        document.getElementById("new_Name").style.display = "table-cell";
+                        document.getElementById("editName").style.display = "none";
+                        document.getElementById("table_edit_button").style.display = "table-cell";
+                        document.getElementById("table_save").style.display = "none";
+}
+
+function risk_table_edit() {
+
+                        var r = document.getElementById("editRisk").value;
+                        document.getElementById("risk_Name").innerHTML = r;
+
+                        var s = document.getElementById("edit_Risk_Status").value;
+                        document.getElementById("risk_Status").innerHTML = s;
+
+                        document.getElementById("risk_Edit_group").style.display = "table-cell";
+                        document.getElementById("risk_Edit_Status_group").style.display = "table-cell";
+
+                        document.getElementById("risk_demo").style.display = "none";
+                        document.getElementById("status_demo").style.display = "none";
+
+                        document.getElementById("risk_Edit_button").style.display = "none";
+                        document.getElementById("risk_Save_button").style.display = "table-cell";
+}
+
+function risk_table_save() {
+
+                        document.getElementById("risk_Name").style.display = "table-cell";
+                        document.getElementById("risk_Status").style.display = "table-cell";
+
+                        document.getElementById("risk_Edit_group").style.display = "none";
+                        document.getElementById("risk_Edit_Status_group").style.display = "none";
+
+                        document.getElementById("risk_Edit_button").style.display = "table-cell";
+                        document.getElementById("risk_Save_button").style.display = "none";
+}</script>
+                
+
+                <body>
+                    <!---Lists the Project Name with the option to edit-->
+                    <h3 id="project_name_header">Project Name</h3>
+                    <h3 id="demo"></h3>
+                    <div class="input-group" id="project_name_edit">
+                        <input type="text" class="form-control" placeholder="Enter Project Name Here" id="myText">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-success" onclick="printing()">
+                                <span>Save</span>
+                            </button>
                         </div>
                     </div>
-                </div>
-                <!--Lists the Owners with the option to edit-->
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="padding-top: 10px;">
-                        <h3>Owner</h3>
+                    <button type="button" class="btn btn-primary" onclick="editing()" id="project_edit_button"><span>Edit</span></button>
+                    <!--Lists the High Level Description with the option to edit-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="padding-top: 10px;">
+                            <h3>High-Level Description</h3>
+                        </div>
+                        <p id="description_demo"></p>
+                        <div class="form-group" id="description_edit_group">
+                            <textarea class="form-control" rows="5" placeholder="Enter Description Here" id="description"></textarea>
+                            <button type="button" class="btn btn-success" id="description_submit" onclick="description_printing()">
+                                <span>Submit</span>
+                            </button>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="description_editing()" id="description_edit_button"><span>Edit</span></button>
                     </div>
-                    <div class="owner">
-                        <!--Entering new owner-->
-                        <div class="panel-body">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter New Owner Here">
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
+
+                    <!--Lists the Owners with the option to edit-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="padding-top: 10px;">
+                            <h3>Owner</h3>
+                        </div>
+                        <div class="owner">
+                            <!--Entering new owner-->
+                            <div class="panel-body">
+                                <!--Lists of current owner-->
+                                <div class="table-responsive">
+                                    <table id="myOwnertable" class="table table-hover table-dark table-striped">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="addOwner">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" onclick="addOwnerFunction()">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-lg-8" id="name_field"><p><strong id="ProjectOwnerID">John Doe</strong></p></td>
+                                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+
+                                                <td id="tableEditGroup">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter New Owner Here" id="editName">
+                                                    </div>
+                                                </td>
+                                                <td id="table_edit_button" class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                                <td id="table_save" class="col-lg-1"><button type="button" class="btn btn-success" onclick="table_save()">Save</button></td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <!--Lists the Team Members with the option to edit-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="padding-top: 10px;">
+                            <h3>Team Members</h3>
+                        </div>
+                        <div class="team">
+                            <!--Entering new team member-->
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table id="myMembertable" class="table table-hover table-dark table-striped">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="addMember">
+                                                        <div class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" onclick="addMemberFunction()">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-lg-8"><p><strong id="Member1">Jim Walden</strong></p></td>
+                                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                                                <td id="tableEditGroup">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
 
-                            <!--Lists of current owner-->
+                                                    </div>
+                                                </td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-lg-8"><p><strong id="Member2">Amanda Pierce</strong></p></td>
+                                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                                                <td id="tableEditGroup">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+
+                                                    </div>
+                                                </td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-lg-8"><p><strong id="Member3">Alex Smith</strong></p></td>
+                                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
+                                                <td id="tableEditGroup">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+
+                                                    </div>
+                                                </td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                                <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Lists the Project Risks with the option to edit-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" style="padding-top: 10px;">
+                            <h3>Risks</h3>
+                        </div>
+                        <div class="risks">
+                            <!--Entering new risk and risk status-->
+
                             <div class="table-responsive">
-                                <table id="owner-table" class="table table-hover table-dark table-striped">
+                                <table id="myRisktable" class="table table-hover table-dark table-striped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <td>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="addRisk">
+
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Status" id="addRiskStatus" />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-success" onclick="addRiskFunction()">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="col-lg-8"><p><strong>Owner Name</strong></p></td>
-                                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
-                                            <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
+                                            <td class="col-lg-4" id="risk_demo"><p><strong>Lack of Support For Architecture</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-4" id="status_demo"><p>Status: <strong class="text-danger">At Risk</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_Status_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                                </div>
+                                            </td>
+                                            <td id="risk_Edit_button" class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lg-4"><p><strong>Vendor Server Maintenece</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-4"><p>Status: <strong class="text-warning">Moderate</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_Status_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lg-4"><p><strong>Product License Expires</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-4"><p>Status: <strong class="text-success">Low Risk</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_Status_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lg-4"><p><strong>Developer Leaves Team</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Name"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Here" id="editRisk">
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-4"><p>Status: <strong class="text-info">Not Assessed</strong></p></td>
+                                            <td class="col-lg-4" id="risk_Status"><p><strong></strong></p></td>
+                                            <td id="risk_Edit_Status_group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter New Risk Status Here" id="edit_Risk_Status" />
+                                                </div>
+                                            </td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="risk_table_edit()">Edit</button></td>
+                                            <td id="risk_Save_button" class="col-lg-1"><button type="button" class="btn btn-success" onclick="risk_table_save()">Save</button></td>
+                                            <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--Lists the Team Members with the option to edit-->
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="padding-top: 10px;">
-                        <h3>Team Members</h3>
-                    </div>
-                    <div class="team">
-                        <!--Entering new team member-->
-                        <div class="panel-body">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter New Member Here">
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
-                                </div>
-                            </div>
 
-                            <!--Lists of current team members-->
-                            <div class="table-responsive">
-                                <table id="member-table" class="table table-hover table-dark table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td class="col-lg-8"><p><strong>Member Name</strong></p></td>
-                                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
-                                            <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Lists the Project Risks with the option to edit-->
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="padding-top: 10px;">
-                        <h3>Risks</h3>
-                    </div>
-                    <div class="risks">
-                        <!--Entering new team member-->
-                        <div class="panel-body">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter New Risk Here">
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-success">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="table-responsive">
-                                <table id="risk-table" class="table table-hover table-dark table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td class="col-lg-4"><p><strong>Risk Name</strong></p></td>
-                                            <td class="col-lg-4"><p><strong>Risk Status</strong></p></td>
-                                            <td class="col-lg-1"><button type="button" class="btn btn-primary">Edit</button></td>
-                                            <td class="col-lg-1"><button type="button" class="btn btn-danger">Delete</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>             
+                </body>
             </div>
             <div class="modal-footer ">
                 <button type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
