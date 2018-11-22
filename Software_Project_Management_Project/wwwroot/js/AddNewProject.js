@@ -28,6 +28,8 @@ document.getElementById("reqButton").onclick = function () {
         location.href = "/home/requirmentspage";
 };
 
+
+//TODO Add functionality to change project name & Potenitally risk change
 function project2ModalChange(owner, ownerid, team1,team1id, team2, team2id, team3, team3id) {
     document.getElementById(ownerid).innerHTML = owner;
     document.getElementById(team1id).innerHTML = team1;
