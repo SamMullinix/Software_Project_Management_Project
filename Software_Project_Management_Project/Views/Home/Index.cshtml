@@ -28,15 +28,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <!--Below are the different example projects w/ buttons that link to the respective modals-->
                         <tr>
-                            <td><p><strong>ProjectName 1A</strong></p></td>
-                            <td><button type="button" class="btn btn-primary" id="reqButton">View REQ
+                            <td><p><strong>User Registration Module</strong></p></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                    View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                              </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal">View Details
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -45,48 +51,19 @@
                         </tr>
 
                         <tr>
-                            <td><p><strong>ProjectName 2B</strong></p></td>
-                            <td><button type="button" class="btn btn-primary ">View REQ
-                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Tim Watson', 'ProjectOwnerID', 'Andrew Jones', 'Member1', 'Sandra Lockhart', 'Member2', 'Casey Driton', 'Member3')">View Details
-                                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                            <td><p><strong>Ordering Vehicle Module</strong></p></td>
                             <td>
-                                <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#viewRequirementsModal">
+                                    View REQ
+                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button>
                             </td>
-                        </tr>
-
-
-                        <tr>
-                            <td><p><strong>ProjectName 3C</strong></p></td>
-                            <td><button type="button" class="btn btn-primary">View REQ
-                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Abby Trabing', 'ProjectOwnerID', 'Trent Chald', 'Member1', 'Dex Pilling', 'Member2', 'Hector Green', 'Member3')">View Details
-                                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                </button></td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td><p><strong>ProjectName 4D</strong></p></td>
                             <td>
-                            <button type="button" class="btn btn-primary">
-                            View REQ
-                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                            </button>
-                            </td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Richard Thames', 'ProjectOwnerID', 'Sam Ressing', 'Member1', 'Becca Newsome', 'Member2', 'Daniel Bronner', 'Member3')">                                    
-                                View Details
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Tim Watson', 'ProjectOwnerID', 'Andrew Jones', 'Member1', 'Sandra Lockhart', 'Member2', 'Casey Driton', 'Member3')">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -96,13 +73,64 @@
 
 
                         <tr>
-                            <td><p><strong>ProjectName 5E</strong></p></td>
-                            <td><button type="button" class="btn btn-primary">View REQ
+                            <td><p><strong>Payment Module</strong></p></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                    View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                </button></td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Jackson Grey', 'ProjectOwnerID', 'Phillip Harkingson', 'Member1', 'Yu Xi', 'Member2', 'Weber Brown', 'Member3')">View Details
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Abby Trabing', 'ProjectOwnerID', 'Trent Chald', 'Member1', 'Dex Pilling', 'Member2', 'Hector Green', 'Member3')">
+                                    View Details
                                     <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-                                </button></td>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td><p><strong>User Feedback Module</strong></p></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                    View REQ
+                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Richard Thames', 'ProjectOwnerID', 'Sam Ressing', 'Member1', 'Becca Newsome', 'Member2', 'Daniel Bronner', 'Member3')">
+                                    View Details
+                                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td><p><strong>Customer Service Module</strong></p></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                    View REQ
+                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetailsModal" onclick="project2ModalChange('Jackson Grey', 'ProjectOwnerID', 'Phillip Harkingson', 'Member1', 'Yu Xi', 'Member2', 'Weber Brown', 'Member3')">
+                                    View Details
+                                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                                </button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -116,26 +144,13 @@
                     </tbody>
 
                 </table>
-
-                <!----
-                  This is the code for a page select button. I'm assuming we're not using it. But just in case here it is
-
-                  <div class="clearfix"></div>
-                <ul class="pagination pull-right">
-                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
-                  -->
             </div>
 
         </div>
     </div>
 </div>
+
+
 
 @*Project 1 Modal*@
 <div class="modal fade" id="viewDetailsModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
@@ -213,12 +228,13 @@
                         display: none;
                     }
                 </style>
-                <script>function DeleteRowFunction(obj) {
+                <script>
+                    function DeleteRowFunction(obj) {
                         var p = obj.parentNode.parentNode;
                         p.parentNode.removeChild(p);
-}
+                    }
 
-function addOwnerFunction() {
+                    function addOwnerFunction() {
                         var ownerTable = document.getElementById("myOwnertable");
                         var row = ownerTable.insertRow(1);
 
@@ -237,9 +253,9 @@ function addOwnerFunction() {
                         // Cell 3 For Delete Button
                         var deleteButton = row.insertCell(-1);
                         deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
-}
+                    }
 
-function addMemberFunction() {
+                    function addMemberFunction() {
                         var memberTable = document.getElementById("myMembertable");
                         var row = memberTable.insertRow(1);
 
@@ -258,9 +274,9 @@ function addMemberFunction() {
                         // Cell 3 For Delete Button
                         var deleteButton = row.insertCell(-1);
                         deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
-}
+                    }
 
-function addRiskFunction() {
+                    function addRiskFunction() {
                         var riskTable = document.getElementById("myRisktable");
                         var row = riskTable.insertRow(1);
 
@@ -287,23 +303,23 @@ function addRiskFunction() {
                         // Cell 4 For Delete Button
                         var deleteButton = row.insertCell(-1);
                         deleteButton.innerHTML = "<button type='button' class='btn btn-danger' onclick='DeleteRowFunction(this)'>Delete</button>"
-}
+                    }
 
-function printing() {
+                    function printing() {
 
                         var x = document.getElementById("myText").value;
                         document.getElementById("demo").innerHTML = x;
                         document.getElementById("project_name_edit").style.display = "none";
                         document.getElementById("project_name_header").style.display = "none";
                         document.getElementById("project_edit_button").style.display = "inline";
-}
+                    }
 
-function editing() {
+                    function editing() {
                         document.getElementById("project_name_edit").style.display = "flex";
                         document.getElementById("project_edit_button").style.display = "none";
-}
+                    }
 
-function description_printing() {
+                    function description_printing() {
 
                         var z = document.getElementById("description").value;
                         document.getElementById("description_demo").style.marginTop = "10px";
@@ -311,23 +327,23 @@ function description_printing() {
                         document.getElementById("description_demo").innerHTML = z;
                         document.getElementById("description_edit_group").style.display = "none";
                         document.getElementById("description_edit_button").style.display = "inline";
-}
+                    }
 
-function description_editing() {
+                    function description_editing() {
 
                         document.getElementById("description_edit_group").style.display = "inherit";
                         document.getElementById("description_edit_group").style.marginLeft = "10px";
                         document.getElementById("description_edit_group").style.marginBottom = "10px";
                         document.getElementById("description_edit_button").style.display = "none";
 
-}
+                    }
 
-function table_edit_row(obj) {
+                    function table_edit_row(obj) {
                         var a = obj.parentNode.parentNode;
                         a.parentNode.table_edit(a);
-}
+                    }
 
-function table_edit() {
+                    function table_edit() {
 
                         var y = document.getElementById("editName").value;
                         document.getElementById("new_Name").innerHTML = y;
@@ -337,18 +353,18 @@ function table_edit() {
 
                         document.getElementById("table_edit_button").style.display = "none";
                         document.getElementById("table_save").style.display = "table-cell";
-}
+                    }
 
-function table_save() {
+                    function table_save() {
 
 
                         document.getElementById("new_Name").style.display = "table-cell";
                         document.getElementById("editName").style.display = "none";
                         document.getElementById("table_edit_button").style.display = "table-cell";
                         document.getElementById("table_save").style.display = "none";
-}
+                    }
 
-function risk_table_edit() {
+                    function risk_table_edit() {
 
                         var r = document.getElementById("editRisk").value;
                         document.getElementById("risk_Name").innerHTML = r;
@@ -364,9 +380,9 @@ function risk_table_edit() {
 
                         document.getElementById("risk_Edit_button").style.display = "none";
                         document.getElementById("risk_Save_button").style.display = "table-cell";
-}
+                    }
 
-function risk_table_save() {
+                    function risk_table_save() {
 
                         document.getElementById("risk_Name").style.display = "table-cell";
                         document.getElementById("risk_Status").style.display = "table-cell";
@@ -376,8 +392,8 @@ function risk_table_save() {
 
                         document.getElementById("risk_Edit_button").style.display = "table-cell";
                         document.getElementById("risk_Save_button").style.display = "none";
-}</script>
-                
+                    }</script>
+
 
                 <body>
                     <!---Lists the Project Name with the option to edit-->
@@ -644,6 +660,7 @@ function risk_table_save() {
         </div>
         <!-- /.modal-content -->
     </div>
+
     <!-- /.modal-dialog -->
 </div>
 
@@ -651,6 +668,387 @@ function risk_table_save() {
 
 
 
+
+<!-- !!!!!!!!REQUIREMENTS MODAL!!!!!!-->
+<!-- For some reason the requirements Modal has to be placed after the Details Modal
+    However that might just be becaues I might have messed up the formating and changing the place
+    of the modals fixed the formatting. IDK-->
+
+<div class="modal fade" id="viewRequirementsModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <script>
+            function printing() {
+
+/*                var x = document.getElementById("myText").value;
+                document.getElementById("demo").innerHTML = x;
+                document.getElementById("project_name_edit").style.display = "none";
+                document.getElementById("project_name_header").style.display = "none";
+                document.getElementById("project_edit_button").style.display = "inline";
+            }
+
+            function createSectionNonFunctional() {
+
+                let div = document.createElement('div');
+                div.innerHTML = "<div id='toCopy'> <div class='col-sm-10'> <a class='block' data-toggle='collapse' href='#multiCollapseExample1' role='button' aria-expanded='true' aria-controls='multiCollapseExample1' id='REQName'>FEQ3</a> </div> <div class='col-sm-2'> <button type='button' class='btn btn-success'>Delete</button> </div> </p> <div class='row'> <div class='col'> <div class='collapse multi-collapse' id='multiCollapseExample1'> <div class='card card-body'> <p> &emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p> <hr class='col-xs-12'> <div class='col-sm-3'></div> <div class='col-sm-4'>RE Analysis</div> <div class='col-sm-2'> <input type='text' class='form-control text-center' id='pwd' placeholder='#' name='pwd'> </div> <div class='col-sm-3'></div> <hr class='col-xs-12'> <div class='col-sm-3'></div> <div class='col-sm-4'>Designing</div> <div class='col-sm-2'> <input type='text' class='form-control text-center' id='pwd' placeholder='#' name='pwd'> </div> <div class='col-sm-3'></div> <hr class='col-xs-12'> <div class='col-sm-3'></div> <div class='col-sm-4'>Coding</div> <div class='col-sm-2' style='background-color:white;'> <input type='text' class='form-control text-center' id='pwd' placeholder='#' name='pwd'> </div> <div class='col-sm-3'></div> <hr class='col-xs-12'> <div class='col-sm-3'></div> <div class='col-sm-4' style='background-color:white;'>Testing</div> <div class='col-sm-2' style='background-color:white;'> <input type='text' class='form-control text-center' id='pwd' placeholder='#' name='pwd'> </div> <div class='col-sm-3'></div> <hr class='col-xs-12'> <div class='col-sm-3'></div> <div class='col-sm-4'>Project Management</div> <div class='col-sm-2'> <input type='text' class='form-control text-center' id='pwd' placeholder='#' name='pwd'> </div> <div class='col-sm-3'></div> </div> </div> </div> </div> </div>";
+                document.getElementById('addTo').appendChild(div);
+                console.log(div)
+            }
+            */
+        </script>
+        <div class="modal-content">
+
+            <div class="row text-center">
+                <!-- Div in which Functional req accordians are added-->
+                <div class="col-sm-5" id="addTo">
+                    <h3>Functional Requirements</h3>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control text-center" placeholder="Enter Requirement" id="REQInput">
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-success" onclick="createSection()">ADD</button>
+                    </div>
+                    <h3> Current Requirements </h3>
+                    <p>
+
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <style>
+
+                            .block {
+                                display: block;
+                                width: 100%;
+                                border: none;
+                                background-color: deepskyblue;
+                                color: white;
+                                padding: 14px 28px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                text-align: center;
+                            }
+
+                                .block:hover {
+                                    background-color: #ddd;
+                                    color: black;
+                                }
+                        </style>
+
+                        <div id="toCopy">
+                            <div class="col-sm-10">
+                                <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1" id="REQName">FEQ1</a>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                            </div>
+
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    <p> &emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                    <hr class="col-xs-12">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4">RE Analysis</div>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4">Designing</div>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4">Coding</div>
+                                    <div class="col-sm-2" style="background-color:white;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                    <div class="col-sm-2" style="background-color:white;">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <hr class="col-xs-12">
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-4">Project Management</div>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                    <div>
+                        <hr class="col-xs-12">
+                        <div class="col-sm-10">
+                            <a class="block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2">FEQ2</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Designing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Coding</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Project Management</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample5">
+                            <div class="card card-body">
+                                <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Designing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Coding</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Project Management</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*above is the code for the left half of the screen, blow is the code for the partition and back button*@
+            <div class="col-sm-1">
+                <html>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+
+                        .vl {
+                            border-right: 6px solid black;
+                            height: 300px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="vl"></div>
+                </body>
+            </html>
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+
+                    .vl {
+                        border-left: 6px solid black;
+                        height: 300px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="vl"></div>
+            </body>
+        </html>
+        <button class="btn-danger" data-dismiss="modal" onclick="goBack()">Back</button>
+    </div>
+    @*Above is the partition, below is the start of the second half of the screen*@
+    <div class="container">
+        <div class="row text-center">
+            <!-- Below Div in which Functional req accordians are added-->
+            <div class="col-sm-4" id="addtoNonFunctional">
+                <h3>Non-Functional Requirements</h3>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control text-center" id="NReqInput" placeholder="Enter Requirement" name="pwd">
+                </div>
+                <div class="col-sm-2">
+                    <!--button to add REQ -->
+                    <button type="button" class="btn btn-success" onclick="createSectionNonFunctional()">ADD</button>
+                </div>
+                <h3> Current Requirements </h3>
+                <p>
+                    <div>
+                        <div class="col-sm-10">
+                            <a class="block" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="true" aria-controls="multiCollapseExample3">FEQ1</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                        </div>
+                    </div>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample3">
+                            <div class="card card-body">
+                                <p> &emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">RE Analysis</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Designing</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Coding</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Project Management</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="col-xs-12">
+                    <div class="col-sm-10">
+                        <a class="block" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="true" aria-controls="multiCollapseExample4">FEQ2</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample4">
+                            <div class="card card-body">
+                                <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Designing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Coding</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Project Management</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
 
 
 <script src="~/js/AddNewProject.js"></script>
