@@ -59,6 +59,21 @@
             display:none;
         }
 
+        #new_Team_Name{
+
+            display:none;
+        }
+
+        #tableTeamEditGroup{
+
+            display:none;
+        }
+
+        #team_save_button{
+
+            display:none;
+        }
+
         #risk_Edit_group{
 
             display:none;
@@ -199,34 +214,54 @@ function description_printing() {
             a.parentNode.table_edit(a);
         }
 
-function table_edit() {
+        function table_edit() {
 
-            var y = document.getElementById("editName").value;
-            document.getElementById("new_Name").innerHTML = y;
-            
-            document.getElementById("tableEditGroup").style.display = "inherit";
+            document.getElementById("tableEditGroup").style.display = "table-cell";
             document.getElementById("name_field").style.display = "none";
             
             document.getElementById("table_edit_button").style.display = "none";
             document.getElementById("table_save").style.display = "table-cell";
+
+            document.getElementById("new_Name").style.display = "none";
         }
+
 
         function table_save() {
 
+            var y = document.getElementById("editName").value;
+            document.getElementById("new_Name").innerHTML = y;
             
             document.getElementById("new_Name").style.display = "table-cell";
-            document.getElementById("editName").style.display = "none";
+            document.getElementById("tableEditGroup").style.display = "none";
+            
             document.getElementById("table_edit_button").style.display = "table-cell";
             document.getElementById("table_save").style.display = "none";
         }
 
+        function team_table_edit() {
+
+            document.getElementById("tableTeamEditGroup").style.display = "table-cell";
+            document.getElementById("new_Team_Name").style.display = "none";
+
+            document.getElementById("team_edit_button").style.display = "none";
+            document.getElementById("team_save_button").style.display = "table-cell";
+
+            document.getElementById("team_name_field").style.display = "none";
+        }
+
+        function team_table_save() {
+
+            var t = document.getElementById("editTeam").value;
+            document.getElementById("new_Team_Name").innerHTML = t;
+
+            document.getElementById("new_Team_Name").style.display = "table-cell";
+            document.getElementById("tableTeamEditGroup").style.display = "none";
+
+            document.getElementById("team_edit_button").style.display = "table-cell";
+            document.getElementById("team_save_button").style.display = "none";
+        }
+
         function risk_table_edit() {
-
-            var r = document.getElementById("editRisk").value;
-            document.getElementById("risk_Name").innerHTML = r;
-
-            var s = document.getElementById("edit_Risk_Status").value;
-            document.getElementById("risk_Status").innerHTML = s;
 
             document.getElementById("risk_Edit_group").style.display = "table-cell";
             document.getElementById("risk_Edit_Status_group").style.display = "table-cell";
@@ -236,9 +271,18 @@ function table_edit() {
 
             document.getElementById("risk_Edit_button").style.display = "none";
             document.getElementById("risk_Save_button").style.display = "table-cell";
+
+            document.getElementById("risk_Name").style.display = "none";
+            document.getElementById("risk_Status").style.display = "none";
         }
 
         function risk_table_save() {
+
+            var r = document.getElementById("editRisk").value;
+            document.getElementById("risk_Name").innerHTML = r;
+
+            var s = document.getElementById("edit_Risk_Status").value;
+            document.getElementById("risk_Status").innerHTML = s;
 
             document.getElementById("risk_Name").style.display = "table-cell";
             document.getElementById("risk_Status").style.display = "table-cell";
@@ -371,42 +415,45 @@ function table_edit() {
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-lg-8"><p><strong>Jim Walden</strong></p></td>
-                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
-                                <td id="tableEditGroup">
+                                <td class="col-lg-8" id="team_name_field"><p><strong>Jim Walden</strong></p></td>
+                                <td class="col-lg-8" id="new_Team_Name"><p><strong></strong></p></td>
+                                <td id="tableTeamEditGroup">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editTeam">
 
 
                                     </div>
                                 </td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                <td class="col-lg-1" id="team_edit_button"><button type="button" class="btn btn-primary" onclick="team_table_edit()">Edit</button></td>
+                                <td class="col-lg-1" id="team_save_button"><button type="button" class="btn btn-success" onclick="team_table_save()">Save</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                             <tr>
-                                <td class="col-lg-8"><p><strong>Amanda Pierce</strong></p></td>
-                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
-                                <td id="tableEditGroup">
+                                <td class="col-lg-8" id="team_name_field"><p><strong>Amanda Pierce</strong></p></td>
+                                <td class="col-lg-8" id="new_Team_Name"><p><strong></strong></p></td>
+                                <td id="tableTeamEditGroup">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editTeam">
 
 
                                     </div>
                                 </td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                <td class="col-lg-1" id="team_edit_button"><button type="button" class="btn btn-primary" onclick="team_table_edit()">Edit</button></td>
+                                <td class="col-lg-1" id="team_save_button"><button type="button" class="btn btn-success" onclick="team_table_save()">Save</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
                             <tr>
-                                <td class="col-lg-8"><p><strong>Alex Smith</strong></p></td>
-                                <td class="col-lg-8" id="new_Name"><p><strong></strong></p></td>
-                                <td id="tableEditGroup">
+                                <td class="col-lg-8" id="team_name_field"><p><strong>Alex Smith</strong></p></td>
+                                <td class="col-lg-8" id="new_Team_Name"><p><strong></strong></p></td>
+                                <td id="tableTeamEditGroup">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editName">
+                                        <input type="text" class="form-control" placeholder="Enter New Team Member Here" id="editTeam">
 
 
                                     </div>
                                 </td>
-                                <td class="col-lg-1"><button type="button" class="btn btn-primary" onclick="table_edit()">Edit</button></td>
+                                <td class="col-lg-1" id="team_edit_button"><button type="button" class="btn btn-primary" onclick="team_table_edit()">Edit</button></td>
+                                <td class="col-lg-1" id="team_save_button"><button type="button" class="btn btn-success" onclick="team_table_save()">Save</button></td>
                                 <td class="col-lg-1"><button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'>Delete</button></td>
                             </tr>
 
