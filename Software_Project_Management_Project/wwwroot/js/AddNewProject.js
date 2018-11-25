@@ -30,9 +30,6 @@ function DeleteRowFunction(obj) {
     p.parentNode.removeChild(p);
 }
 
-document.getElementById("reqButton").onclick = function () {
-    location.href = "/home/requirmentspage";
-};
 
 
 //TODO Add functionality to change project name & Potenitally risk change
