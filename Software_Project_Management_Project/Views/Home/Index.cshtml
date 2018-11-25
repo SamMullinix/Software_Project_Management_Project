@@ -679,7 +679,7 @@
         <script>
             function printing() {
 
-                var x = document.getElementById("myText").value;
+/*                var x = document.getElementById("myText").value;
                 document.getElementById("demo").innerHTML = x;
                 document.getElementById("project_name_edit").style.display = "none";
                 document.getElementById("project_name_header").style.display = "none";
@@ -693,11 +693,12 @@
                 document.getElementById('addTo').appendChild(div);
                 console.log(div)
             }
-
+            */
         </script>
         <div class="modal-content">
 
             <div class="row text-center">
+                <!-- Div in which Functional req accordians are added-->
                 <div class="col-sm-5" id="addTo">
                     <h3>Functional Requirements</h3>
                     <div class="col-sm-10">
@@ -735,8 +736,9 @@
                                 <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1" id="REQName">FEQ1</a>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" class="btn btn-success">Delete</button>
+                                <button type="button" class="btn btn-success" onclick='DeleteRowFunction(this)'>Delete</button>
                             </div>
+
                     </p>
                     <div class="row">
                         <div class="col">
@@ -786,16 +788,62 @@
 
 
                 </div>
-                <hr class="col-xs-12">
-                <div class="col-sm-10">
-                    <a class="block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2">FEQ2</a>
-                </div>
-                <div class="col-sm-2">
-                    <button type="button" class="btn btn-success">Delete</button>
-                </div>
+                    <div>
+                        <hr class="col-xs-12">
+                        <div class="col-sm-10">
+                            <a class="block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2">FEQ2</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-success" onclick='DeleteRowFunction(this)'>Delete</button>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">RE Analysis</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Designing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Coding</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4" style="background-color:white;">Testing</div>
+                                <div class="col-sm-2" style="background-color:white;">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <hr class="col-xs-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-4">Project Management</div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control text-center" id="pwd" placeholder="#" name="pwd">
+                                </div>
+                                <div class="col-sm-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample5">
                             <div class="card card-body">
                                 <p> &emsp;&emsp;&emsp;&emsp;&emsp;<b>ACTIVITY&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HOURS</b></p>
                                 <hr class="col-xs-12">
@@ -875,7 +923,8 @@
     @*Above is the partition, below is the start of the second half of the screen*@
     <div class="container">
         <div class="row text-center">
-            <div class="col-sm-4">
+            <!-- Below Div in which Functional req accordians are added-->
+            <div class="col-sm-4" id="addtoNonFunctional">
                 <h3>Non-Functional Requirements</h3>
                 <div class="col-sm-10">
                     <input type="text" class="form-control text-center" id="NReqInput" placeholder="Enter Requirement" name="pwd">
@@ -886,12 +935,13 @@
                 </div>
                 <h3> Current Requirements </h3>
                 <p>
-
-                    <div class="col-sm-10">
-                        <a class="block" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="true" aria-controls="multiCollapseExample3">FEQ1</a>
-                    </div>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-success">Delete</button>
+                    <div>
+                        <div class="col-sm-10">
+                            <a class="block" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="true" aria-controls="multiCollapseExample3">FEQ1</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-success" onclick='DeleteRowFunction(this)'>Delete</button>
+                        </div>
                     </div>
                 </p>
                 <div class="row">
@@ -938,13 +988,14 @@
                         </div>
                     </div>
                 </div>
-
-                <hr class="col-xs-12">
-                <div class="col-sm-10">
-                    <a class="block" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="true" aria-controls="multiCollapseExample4">FEQ2</a>
-                </div>
-                <div class="col-sm-2">
-                    <button type="button" class="btn btn-success">Delete</button>
+                <div>
+                    <hr class="col-xs-12">
+                    <div class="col-sm-10">
+                        <a class="block" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="true" aria-controls="multiCollapseExample4">FEQ2</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-success" onclick='DeleteRowFunction(this)'>Delete</button>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -990,6 +1041,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
