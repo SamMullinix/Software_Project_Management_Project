@@ -33,11 +33,12 @@ function DeleteRowFunction(obj) {
 
 
 //TODO Add functionality to change project name & Potenitally risk change
-function project2ModalChange(owner, ownerid, team1, team1id, team2, team2id, team3, team3id) {
+function project2ModalChange(owner, ownerid, team1, team1id, team2, team2id, team3, team3id, projectname, projectnameID) {
     document.getElementById(ownerid).innerHTML = owner;
     document.getElementById(team1id).innerHTML = team1;
     document.getElementById(team2id).innerHTML = team2;
     document.getElementById(team3id).innerHTML = team3;
+    document.getElementById(projectnameID).innerHTML = projectname;
 
 }
 
