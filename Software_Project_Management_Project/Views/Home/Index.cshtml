@@ -53,7 +53,7 @@
                         <tr>
                             <td><p><strong>Ordering Vehicle Module</strong></p></td>
                             <td>
-                                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#viewRequirementsModal">
+                                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#viewRequirementsModal" onclick="project2ModalChange('Must Complete Purchase', 'FEQ1', 'User Can Select Buttons', 'FEQ2', 'Must be Secure', 'NFEQ1', 'Must run in 40 Seconds', 'NFEQ2')">
                                     View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button>
@@ -75,7 +75,7 @@
                         <tr>
                             <td><p><strong>Payment Module</strong></p></td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal" onclick="project2ModalChange('Must Accept Payment', 'FEQ1', 'Must Print Reciept After Payment', 'FEQ2', 'Must be Secure', 'NFEQ1', 'Must Process Payment in 90 seconds', 'NFEQ2')">
                                     View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button>
@@ -98,7 +98,7 @@
                         <tr>
                             <td><p><strong>User Feedback Module</strong></p></td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal" onclick="project2ModalChange('Must Take Text Input For Feedback, 'FEQ1', 'Must be able to Submit Feedback', 'FEQ2', 'Must be Maintainable', 'NFEQ1', 'Must Submit Text in 30 Seconds', 'NFEQ2')">
                                     View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button>
@@ -120,7 +120,7 @@
                         <tr>
                             <td><p><strong>Customer Service Module</strong></p></td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewRequirementsModal" onclick="project2ModalChange('Must Accept Customer Service Input', 'FEQ1', 'User Can Dial Phone Number From Link', 'FEQ2', 'Must be Secure', 'NFEQ1', 'Must Submit Form in 30 Seconds', 'NFEQ2')">
                                     View REQ
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </button>
@@ -718,7 +718,7 @@
 
                         <div id="toCopy">
                             <div class="col-sm-10">
-                                <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1" id="REQName">FEQ1</a>
+                                <a class="block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1" id="FEQ1">Home Button Must Navigate Home</a>
                             </div>
                             <div class="col-sm-2">
                                 <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
@@ -776,7 +776,7 @@
                     <div>
                         <hr class="col-xs-12">
                         <div class="col-sm-10">
-                            <a class="block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2">FEQ2</a>
+                            <a class="block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample2" id="FEQ2">User Add Button Must Add Users</a>
                         </div>
                         <div class="col-sm-2">
                             <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
@@ -922,7 +922,7 @@
                 <p>
                     <div>
                         <div class="col-sm-10">
-                            <a class="block" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="true" aria-controls="multiCollapseExample3">FEQ1</a>
+                            <a class="block" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="true" aria-controls="multiCollapseExample3" id="NFEQ1">Must be Portable</a>
                         </div>
                         <div class="col-sm-2">
                             <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
@@ -976,7 +976,7 @@
                 <div>
                     <hr class="col-xs-12">
                     <div class="col-sm-10">
-                        <a class="block" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="true" aria-controls="multiCollapseExample4">FEQ2</a>
+                        <a class="block" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="true" aria-controls="multiCollapseExample4" id="NFEQ2">Must be Maintainable</a>
                     </div>
                     <div class="col-sm-2">
                         <button type="button" class="btn btn-danger" onclick='DeleteRowFunction(this)'> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
