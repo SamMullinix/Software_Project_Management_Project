@@ -16,7 +16,7 @@ function myFunction() {
 
 
     var reqButton = row.insertCell(-1);
-    reqButton.innerHTML = "<button type='button' class='btn btn-primary'>View REQ <span class='glyphicon glyphicon-list-alt' aria-hidden='true'></span></button>";
+    reqButton.innerHTML = "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#viewRequirementsModal'>View REQ <span class='glyphicon glyphicon-list-alt' aria-hidden='true'></span></button>";
 
     var detailsButton = row.insertCell(-1);
     detailsButton.innerHTML = "<button type='button' class='btn btn-info' data-toggle='modal' data-target='#viewDetailsModal'>View Details <span class='glyphicon glyphicon-paperclip' aria-hidden='true'></span></button>";
