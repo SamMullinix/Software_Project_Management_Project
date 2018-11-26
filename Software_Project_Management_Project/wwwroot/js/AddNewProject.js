@@ -38,7 +38,10 @@ function DeleteRowFunction(obj) {
     p.parentNode.removeChild(p);
 }
 
+function project3ModalChange(projectname, projectnameID) {
+    document.getElementById(projectnameID).innerHTML = projectname;
 
+}
 
 //TODO Add functionality to change project name & Potenitally risk change
 function project2ModalChange(owner, ownerid, team1, team1id, team2, team2id, team3, team3id, projectname, projectnameID) {
